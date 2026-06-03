@@ -117,13 +117,21 @@ jobs:
           '
       - name: Airflow DAG Syntax Check
         run: |
+          echo "🔍 Checking Airflow DAGs..."
           mkdir -p airflow/logs
-          python -c '
+          
+          python -c "
           import os
           import sys
-          sys.path.append(".")
+          sys.path.append('.')
           from airflow.models import DagBag
-          dagbag = DagBag(dag_folder="airflow/dags", include_examples=False)
-          print("Number of DAGs found:", len(dagbag.dags))
-          ' || echo "Airflow check completed"    
+
+          dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
+          print('Number of DAGs found:', len(dagbag.dags))
+
+          if dagbag.import_errors:
+              print('Number of errors:', len(dagbag.import_errors))
+              print('⚠️ Some DAGs failed to load')
+          else:
+              print('✅ All DAGs loaded successfully')"    
 
