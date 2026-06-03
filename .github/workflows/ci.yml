@@ -52,12 +52,7 @@ jobs:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/esports_analytics
         run: |
           pytest --cov=. --cov-report=xml -v || echo "No tests found or all tests passed"
-
-      - name: dbt Tests
-        env:
-          DB_HOST: ${{ secrets.DB_HOST }}
-          DB_USER: ${{ secrets.DB_USER }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+            - name: dbt Tests
         run: |
           echo "🔍 Looking for dbt project..."
 
@@ -72,7 +67,7 @@ jobs:
 
           echo "Current directory: $(pwd)"
 
-          # Create minimal profiles.yml for CI using secrets
+          # Create simple profiles.yml for CI (using localhost)
           mkdir -p ~/.dbt
           cat > ~/.dbt/profiles.yml << EOF
           esports_dbt:
@@ -80,20 +75,21 @@ jobs:
             outputs:
               dev:
                 type: postgres
-                host: $DB_HOST
-                user: $DB_USER
-                password: $DB_PASSWORD
+                host: localhost
+                user: postgres
+                password: postgres
                 port: 5432
                 dbname: esports_analytics
                 schema: public
                 threads: 4
           EOF
 
-          echo "✅ Created temporary profiles.yml for CI"
+          echo "✅ Created profiles.yml for CI"
 
           dbt deps || true
           dbt compile --target dev || true
           dbt test --target dev || true
+     
       - name: Airflow DAG Syntax Check
         run: |
           echo "🔍 Checking Airflow DAGs..."
