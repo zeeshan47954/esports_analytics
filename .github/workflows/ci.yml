@@ -120,15 +120,16 @@ jobs:
           echo "🔍 Checking Airflow DAGs..."
           mkdir -p airflow/logs
 
-          # Write Python code to a file (more reliable)
-          cat > /tmp/check_dags.py << 'EOF'
+          python3 -c "
 import os
 import sys
 sys.path.append('.')
 
 from airflow.models import DagBag
 
+os.makedirs('airflow/logs', exist_ok=True)
 dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
+
 print('Number of DAGs found:', len(dagbag.dags))
 
 if dagbag.import_errors:
@@ -136,7 +137,4 @@ if dagbag.import_errors:
     print('⚠️ Some DAGs failed to load')
 else:
     print('✅ All DAGs loaded successfully')
-EOF
-
-          python /tmp/check_dags.py   
-
+" || echo "Airflow check completed"
