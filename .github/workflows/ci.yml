@@ -2,7 +2,11 @@ name: CI Pipeline - Esports Analytics
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - 'feature/**'
+      - 'fix/**'
+      - 'hotfix/**'
   pull_request:
     branches: [ main ]
 
@@ -43,7 +47,6 @@ jobs:
           else
             echo "No requirements.txt found"
           fi
-          # Install required packages for CI
           pip install pytest pytest-cov black flake8 dbt-postgres apache-airflow
 
       - name: Run Linting & Formatting Check
