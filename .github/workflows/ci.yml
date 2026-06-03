@@ -77,7 +77,7 @@ jobs:
           dbt compile --target dev || true
           dbt test --target dev || true
       - name: Airflow DAG Syntax Check
-          run: |
+        run: |
             python -c "
             import os
             import sys
