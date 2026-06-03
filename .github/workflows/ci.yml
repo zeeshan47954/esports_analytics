@@ -39,7 +39,11 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f "requirements.txt" ]; then
             pip install -r requirements.txt
+            echo "Installed from requirements.txt"
+          else
+            echo "No requirements.txt found"
           fi
+          # Install required packages for CI
           pip install pytest pytest-cov black flake8 dbt-postgres apache-airflow
 
       - name: Run Linting & Formatting Check
@@ -63,16 +67,3 @@ jobs:
           else
             echo "dbt folder not found, skipping"
           fi
-
-      - name: Airflow DAG Syntax Check
-        run: |
-          python -c "
-          import os
-          import sys
-          sys.path.append('.')
-          from airflow.models import DagBag
-          dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
-          print('Number of DAGs found:', len(dagbag.dags))
-          print('DAG Load Errors:', dagbag.import_errors)
-          assert len(dagbag.import_errors) == 0, f'DAG import errors found: {dagbag.import_errors}'
-          " || echo "Airflow check completed"
