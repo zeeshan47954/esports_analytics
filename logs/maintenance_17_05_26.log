@@ -1,0 +1,68 @@
+[2026-05-17 12:01:30] === Database Maintenance Started ===
+[2026-05-17 12:01:30] Log file: D:\my-postgres-project\logs\maintenance_17_05_26.log
+[2026-05-17 12:01:30] Checking tables with high dead tuples...
+[2026-05-17 12:01:35] Table: alembic_version      | Live:        1 | Dead:        3 | Dead%:  75.0%  →  NEEDS VACUUM
+[2026-05-17 12:01:35] Found 1 table(s) needing VACUUM. Starting vacuum...
+[2026-05-17 12:01:35] Running VACUUM ANALYZE on alembic_version ...
+[2026-05-17 12:01:35] ❌ ERROR vacuuming alembic_version: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+[2026-05-17 12:01:35] 
+=== Table Sizes After Maintenance ===
+[2026-05-17 12:01:36] Table Name                        Size
+[2026-05-17 12:01:36] ---------------------------------------------
+[2026-05-17 12:01:36] alembic_version                  24 kB
+[2026-05-17 12:01:36] animals                          16 kB
+[2026-05-17 12:01:36] audit_log                       384 kB
+[2026-05-17 12:01:36] elo_history                      11 MB
+[2026-05-17 12:01:36] hello                       8192 bytes
+[2026-05-17 12:01:36] matches                        3320 kB
+[2026-05-17 12:01:36] pipeline_watermarks         8192 bytes
+[2026-05-17 12:01:36] player_bans                      32 kB
+[2026-05-17 12:01:36] player_stats                   9088 kB
+[2026-05-17 12:01:36] players                         136 kB
+[2026-05-17 12:01:36] prize_payouts                    48 kB
+[2026-05-17 12:01:36] team_rosters                     72 kB
+[2026-05-17 12:01:36] teams                            48 kB
+[2026-05-17 12:01:36] tournaments                      64 kB
+[2026-05-17 12:01:36] vehicle                          32 kB
+[2026-05-17 12:01:36] === Database Maintenance Completed Successfully ===
+
+[2026-05-17 12:09:46] === Database Maintenance Started ===
+[2026-05-17 12:09:46] Log file: D:\my-postgres-project\logs\maintenance_17_05_26.log
+[2026-05-17 12:09:46] Checking tables with high dead tuples...
+[2026-05-17 12:09:51] Table: alembic_version      | Live:        1 | Dead:        3 | Dead%:  75.0%  →  NEEDS VACUUM
+[2026-05-17 12:09:51] Table: pipeline_watermarks  | Live:        1 | Dead:        1 | Dead%:  50.0%  →  NEEDS VACUUM
+[2026-05-17 12:09:51] Found 2 table(s) needing VACUUM. Starting vacuum...
+[2026-05-17 12:09:51] Running VACUUM ANALYZE on alembic_version ...
+[2026-05-17 12:09:51] ❌ ERROR vacuuming alembic_version: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+[2026-05-17 12:09:52] Running VACUUM ANALYZE on pipeline_watermarks ...
+[2026-05-17 12:09:52] ❌ ERROR vacuuming pipeline_watermarks: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE pipeline_watermarks;]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+[2026-05-17 12:09:52] 
+=== Table Sizes After Maintenance ===
+[2026-05-17 12:09:53] Table Name                        Size
+[2026-05-17 12:09:53] ---------------------------------------------
+[2026-05-17 12:09:53] alembic_version                  24 kB
+[2026-05-17 12:09:53] animals                          16 kB
+[2026-05-17 12:09:53] audit_log                       384 kB
+[2026-05-17 12:09:53] elo_history                      11 MB
+[2026-05-17 12:09:53] hello                       8192 bytes
+[2026-05-17 12:09:53] matches                        3320 kB
+[2026-05-17 12:09:53] pipeline_watermarks         8192 bytes
+[2026-05-17 12:09:53] player_bans                      32 kB
+[2026-05-17 12:09:53] player_stats                   9088 kB
+[2026-05-17 12:09:53] players                         136 kB
+[2026-05-17 12:09:53] prize_payouts                    48 kB
+[2026-05-17 12:09:53] team_rosters                     72 kB
+[2026-05-17 12:09:53] teams                            48 kB
+[2026-05-17 12:09:53] tournaments                      64 kB
+[2026-05-17 12:09:53] vehicle                          32 kB
+[2026-05-17 12:09:53] === Database Maintenance Completed Successfully ===
+

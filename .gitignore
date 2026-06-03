@@ -1,0 +1,18 @@
+# General
+
+*.ini
+*.txt
+
+# Environment files (most important)
+**/.env
+**/.env.*
+*.env
+
+# Specific directories
+airflow_db_data/
+airflow/dags/.env
+s3/.env
+
+# DBT
+esports_dbt/profiles.yml
+

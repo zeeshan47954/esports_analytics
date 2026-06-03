@@ -1,0 +1,14 @@
+[2026-05-23T04:42:33.840+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.bulk_validate_player_status manual__2026-05-23T04:42:11.130737+00:00 [queued]>
+[2026-05-23T04:42:33.882+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.bulk_validate_player_status manual__2026-05-23T04:42:11.130737+00:00 [queued]>
+[2026-05-23T04:42:33.888+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-23T04:42:33.960+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): bulk_validate_player_status> on 2026-05-23 04:42:11.130737+00:00
+[2026-05-23T04:42:33.973+0000] {standard_task_runner.py:60} INFO - Started process 203 to run task
+[2026-05-23T04:42:33.982+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'bulk_validate_player_status', 'manual__2026-05-23T04:42:11.130737+00:00', '--job-id', '260', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmpinzn0fm2']
+[2026-05-23T04:42:33.988+0000] {standard_task_runner.py:88} INFO - Job 260: Subtask bulk_validate_player_status
+[2026-05-23T04:42:34.137+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.bulk_validate_player_status manual__2026-05-23T04:42:11.130737+00:00 [running]> on host 127bb5de3bc4
+[2026-05-23T04:42:34.350+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='bulk_validate_player_status' AIRFLOW_CTX_EXECUTION_DATE='2026-05-23T04:42:11.130737+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-23T04:42:11.130737+00:00'
+[2026-05-23T04:42:41.804+0000] {nightlypipeline.py:286} INFO - ✅ Player status validation completed. Issues: 0
+[2026-05-23T04:42:41.808+0000] {python.py:201} INFO - Done. Returned value was: 1
+[2026-05-23T04:42:41.867+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=nightly_pipeline, task_id=bulk_validate_player_status, execution_date=20260523T044211, start_date=20260523T044233, end_date=20260523T044241
+[2026-05-23T04:42:41.931+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-23T04:42:41.992+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

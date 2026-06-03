@@ -1,0 +1,25 @@
+[2026-05-23T04:54:11.333+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.dbt_build manual__2026-05-23T04:53:30.272002+00:00 [queued]>
+[2026-05-23T04:54:11.357+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.dbt_build manual__2026-05-23T04:53:30.272002+00:00 [queued]>
+[2026-05-23T04:54:11.359+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-23T04:54:11.393+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): dbt_build> on 2026-05-23 04:53:30.272002+00:00
+[2026-05-23T04:54:11.408+0000] {standard_task_runner.py:60} INFO - Started process 213 to run task
+[2026-05-23T04:54:11.420+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'dbt_build', 'manual__2026-05-23T04:53:30.272002+00:00', '--job-id', '280', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmpg9un9qrt']
+[2026-05-23T04:54:11.428+0000] {standard_task_runner.py:88} INFO - Job 280: Subtask dbt_build
+[2026-05-23T04:54:11.614+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.dbt_build manual__2026-05-23T04:53:30.272002+00:00 [running]> on host 127bb5de3bc4
+[2026-05-23T04:54:11.901+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='dbt_build' AIRFLOW_CTX_EXECUTION_DATE='2026-05-23T04:53:30.272002+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-23T04:53:30.272002+00:00'
+[2026-05-23T04:54:41.832+0000] {nightlypipeline.py:312} INFO - ✅ DBT Build Completed Successfully
+[2026-05-23T04:54:41.834+0000] {nightlypipeline.py:314} INFO - DBT Output (last 10 lines):
+[0m04:54:31  2 of 3 START test not_null_stg_players_id ...................................... [RUN]
+[0m04:54:31  3 of 3 START test unique_stg_players_id ........................................ [RUN]
+[0m04:54:35  3 of 3 PASS unique_stg_players_id .............................................. [[32mPASS[0m in 3.83s]
+[0m04:54:36  2 of 3 PASS not_null_stg_players_id ............................................ [[32mPASS[0m in 4.94s]
+[0m04:54:39  
+[0m04:54:39  Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 22.26 seconds (22.26s).
+[0m04:54:40  
+[0m04:54:40  [32mCompleted successfully[0m
+[0m04:54:40  
+[0m04:54:40  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[2026-05-23T04:54:41.835+0000] {python.py:201} INFO - Done. Returned value was: 1
+[2026-05-23T04:54:41.889+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=nightly_pipeline, task_id=dbt_build, execution_date=20260523T045330, start_date=20260523T045411, end_date=20260523T045441
+[2026-05-23T04:54:41.968+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-23T04:54:42.013+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,20 @@
+[2026-05-22T13:24:59.900+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.maintenance manual__2026-05-22T13:23:44.718989+00:00 [queued]>
+[2026-05-22T13:24:59.919+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.maintenance manual__2026-05-22T13:23:44.718989+00:00 [queued]>
+[2026-05-22T13:24:59.920+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-22T13:24:59.955+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): maintenance> on 2026-05-22 13:23:44.718989+00:00
+[2026-05-22T13:24:59.972+0000] {standard_task_runner.py:60} INFO - Started process 213 to run task
+[2026-05-22T13:24:59.980+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'maintenance', 'manual__2026-05-22T13:23:44.718989+00:00', '--job-id', '167', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmpzophq1g2']
+[2026-05-22T13:24:59.985+0000] {standard_task_runner.py:88} INFO - Job 167: Subtask maintenance
+[2026-05-22T13:25:00.139+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.maintenance manual__2026-05-22T13:23:44.718989+00:00 [running]> on host 74e8a7aa2252
+[2026-05-22T13:25:00.421+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='maintenance' AIRFLOW_CTX_EXECUTION_DATE='2026-05-22T13:23:44.718989+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-22T13:23:44.718989+00:00'
+[2026-05-22T13:25:00.427+0000] {logging_mixin.py:188} INFO - [2026-05-22 13:25:00] === Database Maintenance Started ===
+[2026-05-22T13:25:06.130+0000] {logging_mixin.py:188} INFO - [2026-05-22 13:25:06] Found 1 bloated tables. Running VACUUM...
+[2026-05-22T13:25:06.136+0000] {logging_mixin.py:188} INFO - [2026-05-22 13:25:06] Vacuuming alembic_version...
+[2026-05-22T13:25:06.436+0000] {nightlypipeline.py:381} ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+[2026-05-22T13:25:06.724+0000] {python.py:201} INFO - Done. Returned value was: 0
+[2026-05-22T13:25:06.806+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=nightly_pipeline, task_id=maintenance, execution_date=20260522T132344, start_date=20260522T132459, end_date=20260522T132506
+[2026-05-22T13:25:06.878+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-22T13:25:06.964+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

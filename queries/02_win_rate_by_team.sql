@@ -1,0 +1,2 @@
+ select tournament_id,team_a_id,round(((count(team_a_id )filter(where team_a_id =winner_id))::numeric/(count(team_a_id))::numeric)*100,2) as winrate_per_tournament from matches
+group by tournament_id,team_a_id order by tournament_id ,team_a_id

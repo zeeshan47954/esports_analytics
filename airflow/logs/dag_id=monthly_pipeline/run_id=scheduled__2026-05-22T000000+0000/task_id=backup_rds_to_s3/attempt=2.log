@@ -1,0 +1,42 @@
+[2026-05-23T06:59:28.527+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: monthly_pipeline.backup_rds_to_s3 scheduled__2026-05-22T00:00:00+00:00 [queued]>
+[2026-05-23T06:59:28.549+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: monthly_pipeline.backup_rds_to_s3 scheduled__2026-05-22T00:00:00+00:00 [queued]>
+[2026-05-23T06:59:28.550+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 3
+[2026-05-23T06:59:28.583+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): backup_rds_to_s3> on 2026-05-22 00:00:00+00:00
+[2026-05-23T06:59:28.600+0000] {standard_task_runner.py:60} INFO - Started process 283 to run task
+[2026-05-23T06:59:28.610+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'monthly_pipeline', 'backup_rds_to_s3', 'scheduled__2026-05-22T00:00:00+00:00', '--job-id', '317', '--raw', '--subdir', 'DAGS_FOLDER/month_pipeline.py', '--cfg-path', '/tmp/tmp8rtirha0']
+[2026-05-23T06:59:28.616+0000] {standard_task_runner.py:88} INFO - Job 317: Subtask backup_rds_to_s3
+[2026-05-23T06:59:28.816+0000] {task_command.py:423} INFO - Running <TaskInstance: monthly_pipeline.backup_rds_to_s3 scheduled__2026-05-22T00:00:00+00:00 [running]> on host 127bb5de3bc4
+[2026-05-23T06:59:29.317+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='monthly_pipeline' AIRFLOW_CTX_TASK_ID='backup_rds_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2026-05-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-22T00:00:00+00:00'
+[2026-05-23T06:59:29.321+0000] {month_pipeline.py:80} INFO - Starting RDS Backup for database: postgres
+[2026-05-23T06:59:29.326+0000] {month_pipeline.py:81} INFO - Local Path : D:\dbeaverbackup/backup_20260523_065929.sql.gz
+[2026-05-23T06:59:29.328+0000] {month_pipeline.py:82} INFO - S3 Path    : s3://esports-data-zeeshan/backup/backup_20260523_065929.sql.gz
+[2026-05-23T06:59:31.928+0000] {month_pipeline.py:105} ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+[2026-05-23T06:59:31.930+0000] {month_pipeline.py:149} ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 106, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+[2026-05-23T06:59:31.972+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 106, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/month_pipeline.py", line 150, in backup_rds_to_local_and_s3
+    raise AirflowException("RDS Backup Failed") from e
+airflow.exceptions.AirflowException: RDS Backup Failed
+[2026-05-23T06:59:31.985+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=monthly_pipeline, task_id=backup_rds_to_s3, execution_date=20260522T000000, start_date=20260523T065928, end_date=20260523T065931
+[2026-05-23T06:59:32.030+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 317 for task backup_rds_to_s3 (RDS Backup Failed; 283)
+[2026-05-23T06:59:32.057+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-05-23T06:59:32.123+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

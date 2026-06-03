@@ -1,0 +1,16 @@
+[2026-05-23T07:13:25.366+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: monthly_pipeline.backup_rds_to_s3 manual__2026-05-23T07:13:21.815764+00:00 [queued]>
+[2026-05-23T07:13:25.392+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: monthly_pipeline.backup_rds_to_s3 manual__2026-05-23T07:13:21.815764+00:00 [queued]>
+[2026-05-23T07:13:25.394+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-23T07:13:25.442+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): backup_rds_to_s3> on 2026-05-23 07:13:21.815764+00:00
+[2026-05-23T07:13:25.465+0000] {standard_task_runner.py:60} INFO - Started process 219 to run task
+[2026-05-23T07:13:25.478+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'monthly_pipeline', 'backup_rds_to_s3', 'manual__2026-05-23T07:13:21.815764+00:00', '--job-id', '330', '--raw', '--subdir', 'DAGS_FOLDER/month_pipeline.py', '--cfg-path', '/tmp/tmpmh6996xu']
+[2026-05-23T07:13:25.485+0000] {standard_task_runner.py:88} INFO - Job 330: Subtask backup_rds_to_s3
+[2026-05-23T07:13:25.745+0000] {task_command.py:423} INFO - Running <TaskInstance: monthly_pipeline.backup_rds_to_s3 manual__2026-05-23T07:13:21.815764+00:00 [running]> on host 2b5a21d826dc
+[2026-05-23T07:13:26.062+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='monthly_pipeline' AIRFLOW_CTX_TASK_ID='backup_rds_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2026-05-23T07:13:21.815764+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-23T07:13:21.815764+00:00'
+[2026-05-23T07:13:26.066+0000] {month_pipeline.py:60} INFO - Starting RDS Backup for database: postgres
+[2026-05-23T07:15:43.459+0000] {month_pipeline.py:92} INFO - ✅ Local backup created successfully (5.77 MB)
+[2026-05-23T07:15:56.472+0000] {month_pipeline.py:109} INFO - ✅ Backup uploaded to S3: s3://esports-data-zeeshan/backup/backup_20260523_071326.sql.gz
+[2026-05-23T07:15:56.582+0000] {python.py:201} INFO - Done. Returned value was: 1
+[2026-05-23T07:15:56.632+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=monthly_pipeline, task_id=backup_rds_to_s3, execution_date=20260523T071321, start_date=20260523T071325, end_date=20260523T071556
+[2026-05-23T07:15:56.717+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-23T07:15:56.765+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

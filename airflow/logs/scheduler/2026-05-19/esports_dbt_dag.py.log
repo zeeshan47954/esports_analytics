@@ -1,0 +1,147 @@
+[2026-05-19T05:02:57.619+0000] {processor.py:161} INFO - Started process (PID=162) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:02:57.640+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:02:57.654+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:02:57.653+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:02:58.060+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:02:58.839+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:02:58.838+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:02:59.279+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:02:59.278+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:03:00.225+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 2.679 seconds
+[2026-05-19T05:03:30.902+0000] {processor.py:161} INFO - Started process (PID=190) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:03:30.905+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:03:30.913+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:03:30.912+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:03:30.969+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:03:31.358+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:03:31.358+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:03:31.432+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:03:31.431+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:03:31.489+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.611 seconds
+[2026-05-19T05:04:02.193+0000] {processor.py:161} INFO - Started process (PID=200) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:04:02.195+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:04:02.196+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:04:02.196+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:04:02.240+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:04:02.331+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:04:02.331+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:04:02.393+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:04:02.392+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:04:02.435+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.247 seconds
+[2026-05-19T05:04:32.783+0000] {processor.py:161} INFO - Started process (PID=210) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:04:32.785+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:04:32.787+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:04:32.786+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:04:32.832+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:04:32.863+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:04:32.862+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:04:32.917+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:04:32.916+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:04:32.991+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.214 seconds
+[2026-05-19T05:05:03.543+0000] {processor.py:161} INFO - Started process (PID=220) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:05:03.550+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:05:03.553+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:05:03.552+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:05:03.617+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:05:04.277+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:05:04.276+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:05:04.384+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:05:04.383+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:05:04.495+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.974 seconds
+[2026-05-19T05:05:34.906+0000] {processor.py:161} INFO - Started process (PID=230) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:05:34.907+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:05:34.909+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:05:34.908+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:05:34.944+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:05:34.992+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:05:34.992+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:05:35.033+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:05:35.033+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:05:35.065+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.167 seconds
+[2026-05-19T05:06:05.366+0000] {processor.py:161} INFO - Started process (PID=240) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:06:05.368+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:06:05.369+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:06:05.369+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:06:05.398+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:06:05.429+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:06:05.428+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:06:05.466+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:06:05.465+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:06:05.525+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.165 seconds
+[2026-05-19T05:06:35.912+0000] {processor.py:161} INFO - Started process (PID=250) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:06:35.915+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:06:35.917+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:06:35.916+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:06:35.975+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:06:36.395+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:06:36.395+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:06:36.466+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:06:36.466+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:06:36.511+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.607 seconds
+[2026-05-19T05:07:06.663+0000] {processor.py:161} INFO - Started process (PID=260) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:07:06.664+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:07:06.666+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:07:06.666+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:07:06.700+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:07:06.744+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:07:06.744+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:07:06.788+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:07:06.787+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:07:06.822+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.164 seconds
+[2026-05-19T05:07:37.157+0000] {processor.py:161} INFO - Started process (PID=270) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:07:37.158+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:07:37.160+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:07:37.159+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:07:37.203+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:07:37.234+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:07:37.234+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:07:37.290+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:07:37.290+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:07:37.341+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.192 seconds
+[2026-05-19T05:08:07.747+0000] {processor.py:161} INFO - Started process (PID=280) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:08:07.748+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:08:07.749+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:08:07.749+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:08:07.782+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:08:07.957+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:08:07.957+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:08:07.999+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:08:07.998+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:08:08.029+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.287 seconds
+[2026-05-19T05:08:38.297+0000] {processor.py:161} INFO - Started process (PID=307) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:08:38.299+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:08:38.302+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:08:38.301+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:08:38.339+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:08:38.405+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:08:38.404+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:08:38.482+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:08:38.482+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:08:38.523+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.234 seconds
+[2026-05-19T05:09:08.903+0000] {processor.py:161} INFO - Started process (PID=317) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:09:08.905+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:09:08.907+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:09:08.906+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:09:08.957+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:09:08.993+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:09:08.993+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:09:09.041+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:09:09.041+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:09:09.079+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.182 seconds
+[2026-05-19T05:09:39.407+0000] {processor.py:161} INFO - Started process (PID=327) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:09:39.409+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:09:39.410+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:09:39.410+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:09:39.488+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:09:39.758+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:09:39.758+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:09:39.826+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:09:39.826+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:09:39.880+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.481 seconds
+[2026-05-19T05:10:10.013+0000] {processor.py:161} INFO - Started process (PID=337) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:10:10.015+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:10:10.016+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:10:10.016+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:10:10.059+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:10:10.116+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:10:10.115+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:10:10.164+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:10:10.163+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:10:10.207+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.199 seconds
+[2026-05-19T05:10:40.497+0000] {processor.py:161} INFO - Started process (PID=347) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:10:40.499+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T05:10:40.500+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:10:40.500+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:10:40.532+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T05:10:40.563+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:10:40.562+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T05:10:40.604+0000] {logging_mixin.py:188} INFO - [2026-05-19T05:10:40.603+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T05:10:40.635+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.143 seconds
+[2026-05-19T06:03:25.241+0000] {processor.py:161} INFO - Started process (PID=162) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:03:25.268+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T06:03:25.318+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:03:25.314+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:03:25.687+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:03:28.657+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:03:28.657+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T06:03:28.780+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:03:28.780+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T06:03:29.046+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 3.889 seconds
+[2026-05-19T06:04:31.707+0000] {processor.py:161} INFO - Started process (PID=193) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:04:31.712+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T06:04:31.721+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:04:31.719+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:04:32.419+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:04:34.092+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:04:34.090+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T06:04:34.843+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:04:34.834+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T06:04:35.522+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 3.887 seconds
+[2026-05-19T06:05:05.926+0000] {processor.py:161} INFO - Started process (PID=200) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:05:05.929+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T06:05:05.932+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:05:05.931+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:05:05.974+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:05:06.254+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:05:06.254+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T06:05:06.301+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:05:06.301+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T06:05:06.353+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.435 seconds
+[2026-05-19T06:05:36.785+0000] {processor.py:161} INFO - Started process (PID=210) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:05:36.787+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T06:05:36.791+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:05:36.789+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:05:36.865+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:05:36.943+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:05:36.942+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T06:05:37.034+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:05:37.033+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T06:05:37.167+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.391 seconds
+[2026-05-19T06:06:08.321+0000] {processor.py:161} INFO - Started process (PID=220) to work on /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:06:08.323+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/esports_dbt_dag.py for tasks to queue
+[2026-05-19T06:06:08.324+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:06:08.324+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:06:08.368+0000] {processor.py:840} INFO - DAG(s) 'esports_dbt_pipeline' retrieved from /opt/airflow/dags/esports_dbt_dag.py
+[2026-05-19T06:06:08.587+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:06:08.587+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2026-05-19T06:06:08.630+0000] {logging_mixin.py:188} INFO - [2026-05-19T06:06:08.630+0000] {dag.py:3820} INFO - Setting next_dagrun for esports_dbt_pipeline to 2026-05-19T00:00:00+00:00, run_after=2026-05-20T00:00:00+00:00
+[2026-05-19T06:06:08.668+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/esports_dbt_dag.py took 0.354 seconds

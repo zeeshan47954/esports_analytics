@@ -1,0 +1,25 @@
+[2026-05-22T13:41:26.994+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.load_new_matches_from_rds manual__2026-05-22T13:41:04.206584+00:00 [queued]>
+[2026-05-22T13:41:27.017+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.load_new_matches_from_rds manual__2026-05-22T13:41:04.206584+00:00 [queued]>
+[2026-05-22T13:41:27.021+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-22T13:41:27.098+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): load_new_matches_from_rds> on 2026-05-22 13:41:04.206584+00:00
+[2026-05-22T13:41:27.120+0000] {standard_task_runner.py:60} INFO - Started process 189 to run task
+[2026-05-22T13:41:27.132+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'load_new_matches_from_rds', 'manual__2026-05-22T13:41:04.206584+00:00', '--job-id', '179', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmp09iaqnty']
+[2026-05-22T13:41:27.144+0000] {standard_task_runner.py:88} INFO - Job 179: Subtask load_new_matches_from_rds
+[2026-05-22T13:41:27.302+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.load_new_matches_from_rds manual__2026-05-22T13:41:04.206584+00:00 [running]> on host 74e8a7aa2252
+[2026-05-22T13:41:27.553+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='load_new_matches_from_rds' AIRFLOW_CTX_EXECUTION_DATE='2026-05-22T13:41:04.206584+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-22T13:41:04.206584+00:00'
+[2026-05-22T13:41:32.046+0000] {nightlypipeline.py:132} INFO - 📌 Creating watermark_pipeline table...
+[2026-05-22T13:41:32.916+0000] {nightlypipeline.py:146} INFO - 📅 Last successful run: 2020-01-01 00:00:00
+[2026-05-22T13:41:33.050+0000] {nightlypipeline.py:156} INFO - 📌 Creating new_matches table...
+[2026-05-22T13:41:34.342+0000] {nightlypipeline.py:183} INFO - 📦 Found 225 new matches to process
+[2026-05-22T13:41:34.369+0000] {nightlypipeline.py:226} ERROR - ❌ Error in load_new_matches_from_rds: insert or update on table "new_matches" violates foreign key constraint "new_matches_tournament_id_fkey"
+DETAIL:  Key (tournament_id)=(d965d018-e386-4444-b687-88a8f8987e26) is not present in table "tournaments".
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 187, in load_new_matches_from_rds
+    tgt_cur.execute("""
+psycopg2.errors.ForeignKeyViolation: insert or update on table "new_matches" violates foreign key constraint "new_matches_tournament_id_fkey"
+DETAIL:  Key (tournament_id)=(d965d018-e386-4444-b687-88a8f8987e26) is not present in table "tournaments".
+
+[2026-05-22T13:41:34.382+0000] {python.py:201} INFO - Done. Returned value was: 0
+[2026-05-22T13:41:34.465+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=nightly_pipeline, task_id=load_new_matches_from_rds, execution_date=20260522T134104, start_date=20260522T134126, end_date=20260522T134134
+[2026-05-22T13:41:34.516+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-22T13:41:34.580+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,56 @@
+[2026-05-23T04:28:27.488+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.load_new_matches_from_rds manual__2026-05-23T04:12:45.824567+00:00 [queued]>
+[2026-05-23T04:28:27.640+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.load_new_matches_from_rds manual__2026-05-23T04:12:45.824567+00:00 [queued]>
+[2026-05-23T04:28:27.642+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-23T04:28:27.972+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): load_new_matches_from_rds> on 2026-05-23 04:12:45.824567+00:00
+[2026-05-23T04:28:28.505+0000] {standard_task_runner.py:60} INFO - Started process 200 to run task
+[2026-05-23T04:28:28.632+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'load_new_matches_from_rds', 'manual__2026-05-23T04:12:45.824567+00:00', '--job-id', '221', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmphad_gdju']
+[2026-05-23T04:28:28.667+0000] {standard_task_runner.py:88} INFO - Job 221: Subtask load_new_matches_from_rds
+[2026-05-23T04:28:30.259+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.load_new_matches_from_rds manual__2026-05-23T04:12:45.824567+00:00 [running]> on host 127bb5de3bc4
+[2026-05-23T04:28:33.193+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='load_new_matches_from_rds' AIRFLOW_CTX_EXECUTION_DATE='2026-05-23T04:12:45.824567+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-23T04:12:45.824567+00:00'
+[2026-05-23T04:28:35.394+0000] {nightlypipeline.py:234} ERROR - ❌ Critical Error in load_new_matches_from_rds: module 'boto3' has no attribute 'utils'
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 109, in load_new_matches_from_rds
+    s3 = boto3.client(
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/__init__.py", line 92, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/__init__.py", line 80, in _get_default_session
+    setup_default_session()
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/__init__.py", line 34, in setup_default_session
+    DEFAULT_SESSION = Session(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/session.py", line 91, in __init__
+    self._register_default_handlers()
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/session.py", line 484, in _register_default_handlers
+    boto3.utils.lazy_call(
+AttributeError: module 'boto3' has no attribute 'utils'
+[2026-05-23T04:28:35.466+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 109, in load_new_matches_from_rds
+    s3 = boto3.client(
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/__init__.py", line 92, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/__init__.py", line 80, in _get_default_session
+    setup_default_session()
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/__init__.py", line 34, in setup_default_session
+    DEFAULT_SESSION = Session(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/session.py", line 91, in __init__
+    self._register_default_handlers()
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/session.py", line 484, in _register_default_handlers
+    boto3.utils.lazy_call(
+AttributeError: module 'boto3' has no attribute 'utils'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/nightlypipeline.py", line 241, in load_new_matches_from_rds
+    raise AirflowException("load_new_matches_from_rds failed") from e
+airflow.exceptions.AirflowException: load_new_matches_from_rds failed
+[2026-05-23T04:28:35.497+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=nightly_pipeline, task_id=load_new_matches_from_rds, execution_date=20260523T041245, start_date=20260523T042827, end_date=20260523T042835
+[2026-05-23T04:28:35.596+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 221 for task load_new_matches_from_rds (load_new_matches_from_rds failed; 200)
+[2026-05-23T04:28:35.643+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-05-23T04:28:35.714+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

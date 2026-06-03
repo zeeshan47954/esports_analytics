@@ -1,0 +1,23 @@
+[2026-05-22T13:24:23.270+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.bulk_validate_player_status manual__2026-05-22T13:23:44.718989+00:00 [queued]>
+[2026-05-22T13:24:23.293+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.bulk_validate_player_status manual__2026-05-22T13:23:44.718989+00:00 [queued]>
+[2026-05-22T13:24:23.294+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-22T13:24:23.328+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): bulk_validate_player_status> on 2026-05-22 13:23:44.718989+00:00
+[2026-05-22T13:24:23.346+0000] {standard_task_runner.py:60} INFO - Started process 191 to run task
+[2026-05-22T13:24:23.357+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'bulk_validate_player_status', 'manual__2026-05-22T13:23:44.718989+00:00', '--job-id', '164', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmp_t4md15l']
+[2026-05-22T13:24:23.363+0000] {standard_task_runner.py:88} INFO - Job 164: Subtask bulk_validate_player_status
+[2026-05-22T13:24:23.494+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.bulk_validate_player_status manual__2026-05-22T13:23:44.718989+00:00 [running]> on host 74e8a7aa2252
+[2026-05-22T13:24:23.786+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='bulk_validate_player_status' AIRFLOW_CTX_EXECUTION_DATE='2026-05-22T13:23:44.718989+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-22T13:23:44.718989+00:00'
+[2026-05-22T13:24:26.392+0000] {nightlypipeline.py:275} ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 242, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+[2026-05-22T13:24:26.405+0000] {python.py:201} INFO - Done. Returned value was: 0
+[2026-05-22T13:24:26.491+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=nightly_pipeline, task_id=bulk_validate_player_status, execution_date=20260522T132344, start_date=20260522T132423, end_date=20260522T132426
+[2026-05-22T13:24:26.557+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-22T13:24:26.645+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

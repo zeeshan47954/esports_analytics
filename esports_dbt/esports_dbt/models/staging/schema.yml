@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: stg_players
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+
+      - name: elo_rating
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 4000
+
+  - name: stg_player_stats
+    columns:
+      - name: stat_id
+        tests:
+          - unique
+          - not_null
+
+      - name: headshot_pct
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 100
+
+  - name: stg_tournaments
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['upcoming', 'cancelled', 'completed', 'ongoing']
+              quote: true                # Important for string values
+
+  - name: stg_matches
+    columns:
+      - name: match_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_teams
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null

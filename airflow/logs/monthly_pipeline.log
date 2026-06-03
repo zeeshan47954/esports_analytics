@@ -1,0 +1,46 @@
+2026-05-23 07:13:26,066 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 07:15:43,459 - INFO - ✅ Local backup created successfully (5.77 MB)
+2026-05-23 07:15:56,472 - INFO - ✅ Backup uploaded to S3: s3://esports-data-zeeshan/backup/backup_20260523_071326.sql.gz
+2026-05-23 07:15:59,280 - INFO - Starting cleanup: Deleting objects older than 90 days in bucket 'esports-data-zeeshan'
+2026-05-23 07:16:01,426 - ERROR - ❌ S3 Cleanup failed: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 151, in cleanup_old_s3_backups
+    if last_modified < cutoff_date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+2026-05-23 07:21:04,376 - INFO - Starting cleanup: Deleting objects older than 90 days in bucket 'esports-data-zeeshan'
+2026-05-23 07:21:05,664 - ERROR - ❌ S3 Cleanup failed: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 151, in cleanup_old_s3_backups
+    if last_modified < cutoff_date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+2026-05-23 07:26:08,245 - INFO - Starting cleanup: Deleting objects older than 90 days in bucket 'esports-data-zeeshan'
+2026-05-23 07:26:09,366 - ERROR - ❌ S3 Cleanup failed: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 151, in cleanup_old_s3_backups
+    if last_modified < cutoff_date:
+TypeError: can't compare offset-naive and offset-aware datetimes
+2026-05-23 08:00:30,967 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 08:03:10,003 - INFO - ✅ Local backup created (5.77 MB)
+2026-05-23 08:03:19,691 - INFO - ✅ Backup uploaded to S3: s3://esports-data-zeeshan/backup/backup_20260523_080030.sql.gz
+2026-05-23 08:03:25,301 - INFO - Starting cleanup: Deleting objects older than 90 days in bucket 'esports-data-zeeshan'
+2026-05-23 08:03:26,816 - INFO - ✅ Cleanup completed. Deleted 0 files (0.00 MB)
+2026-05-24 03:39:38,957 - INFO - Starting RDS Backup for database: postgres
+2026-05-24 03:40:37,141 - INFO - ✅ Local backup created (5.77 MB)
+2026-05-24 03:40:53,912 - INFO - ✅ Backup uploaded to S3: s3://esports-data-zeeshan/backup/backup_20260524_033938.sql.gz
+2026-05-24 03:40:57,452 - INFO - Starting cleanup: Deleting objects older than 90 days in bucket 'esports-data-zeeshan'
+2026-05-24 03:40:58,711 - INFO - ✅ Cleanup completed. Deleted 0 files (0.00 MB)
+2026-05-25 02:44:34,440 - INFO - Starting RDS Backup for database: postgres
+2026-05-25 02:45:30,915 - INFO - ✅ Local backup created (5.79 MB)
+2026-05-25 02:45:44,964 - INFO - ✅ Backup uploaded to S3: s3://esports-data-zeeshan/backup/backup_20260525_024434.sql.gz
+2026-05-25 02:45:51,885 - INFO - Starting cleanup: Deleting objects older than 90 days in bucket 'esports-data-zeeshan'
+2026-05-25 02:45:53,105 - INFO - ✅ Cleanup completed. Deleted 0 files (0.00 MB)
+2026-06-02 05:22:50,263 - INFO - Starting RDS Backup for database: postgres
+2026-06-02 05:22:50,293 - INFO - Starting RDS Backup for database: postgres
+2026-06-02 05:24:26,146 - INFO - ✅ Local backup created (5.80 MB)
+2026-06-02 05:24:26,202 - INFO - ✅ Local backup created (5.80 MB)
+2026-06-02 05:24:50,331 - INFO - ✅ Backup uploaded to S3: s3://esports-data-zeeshan/backup/backup_20260602_052250.sql.gz
+2026-06-02 05:25:01,404 - INFO - Starting cleanup: Deleting objects older than 90 days in bucket 'esports-data-zeeshan'
+2026-06-02 05:25:03,417 - INFO - ✅ Cleanup completed. Deleted 0 files (0.00 MB)
+2026-06-02 05:25:04,364 - INFO - ✅ Backup uploaded to S3: s3://esports-data-zeeshan/backup/backup_20260602_052250.sql.gz
+2026-06-02 05:25:09,260 - INFO - Starting cleanup: Deleting objects older than 90 days in bucket 'esports-data-zeeshan'
+2026-06-02 05:25:10,589 - INFO - ✅ Cleanup completed. Deleted 0 files (0.00 MB)

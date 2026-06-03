@@ -1,0 +1,1 @@
+select *,dense_rank()over(order by elo_rating desc) from players p limit 10

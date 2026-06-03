@@ -1,0 +1,14 @@
+[2026-05-22T13:23:54.847+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.check_rds_connection manual__2026-05-22T13:23:44.718989+00:00 [queued]>
+[2026-05-22T13:23:54.875+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.check_rds_connection manual__2026-05-22T13:23:44.718989+00:00 [queued]>
+[2026-05-22T13:23:54.877+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-22T13:23:54.939+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): check_rds_connection> on 2026-05-22 13:23:44.718989+00:00
+[2026-05-22T13:23:54.968+0000] {standard_task_runner.py:60} INFO - Started process 176 to run task
+[2026-05-22T13:23:55.008+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'check_rds_connection', 'manual__2026-05-22T13:23:44.718989+00:00', '--job-id', '161', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmp2rx3mw9r']
+[2026-05-22T13:23:55.107+0000] {standard_task_runner.py:88} INFO - Job 161: Subtask check_rds_connection
+[2026-05-22T13:23:55.558+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.check_rds_connection manual__2026-05-22T13:23:44.718989+00:00 [running]> on host 74e8a7aa2252
+[2026-05-22T13:23:56.086+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='check_rds_connection' AIRFLOW_CTX_EXECUTION_DATE='2026-05-22T13:23:44.718989+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-22T13:23:44.718989+00:00'
+[2026-05-22T13:24:01.990+0000] {nightlypipeline.py:70} INFO - ✅ RDS Connection Successful
+[2026-05-22T13:24:01.999+0000] {python.py:201} INFO - Done. Returned value was: 1
+[2026-05-22T13:24:02.592+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=nightly_pipeline, task_id=check_rds_connection, execution_date=20260522T132344, start_date=20260522T132354, end_date=20260522T132402
+[2026-05-22T13:24:02.852+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-22T13:24:03.121+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

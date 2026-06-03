@@ -1,0 +1,44 @@
+[2026-05-23T04:31:57.956+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.bulk_validate_player_status manual__2026-05-23T04:29:18.654031+00:00 [queued]>
+[2026-05-23T04:31:58.004+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.bulk_validate_player_status manual__2026-05-23T04:29:18.654031+00:00 [queued]>
+[2026-05-23T04:31:58.007+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 3
+[2026-05-23T04:31:58.138+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): bulk_validate_player_status> on 2026-05-23 04:29:18.654031+00:00
+[2026-05-23T04:31:58.237+0000] {standard_task_runner.py:60} INFO - Started process 177 to run task
+[2026-05-23T04:31:58.246+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'bulk_validate_player_status', 'manual__2026-05-23T04:29:18.654031+00:00', '--job-id', '240', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmp4qu2n2m0']
+[2026-05-23T04:31:58.275+0000] {standard_task_runner.py:88} INFO - Job 240: Subtask bulk_validate_player_status
+[2026-05-23T04:31:58.829+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.bulk_validate_player_status manual__2026-05-23T04:29:18.654031+00:00 [running]> on host 127bb5de3bc4
+[2026-05-23T04:31:59.813+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='bulk_validate_player_status' AIRFLOW_CTX_EXECUTION_DATE='2026-05-23T04:29:18.654031+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-23T04:29:18.654031+00:00'
+[2026-05-23T04:32:03.000+0000] {nightlypipeline.py:290} ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+[2026-05-23T04:32:03.155+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/nightlypipeline.py", line 291, in bulk_validate_player_status
+    raise AirflowException("Player validation failed") from e
+airflow.exceptions.AirflowException: Player validation failed
+[2026-05-23T04:32:03.197+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=nightly_pipeline, task_id=bulk_validate_player_status, execution_date=20260523T042918, start_date=20260523T043157, end_date=20260523T043203
+[2026-05-23T04:32:03.270+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 240 for task bulk_validate_player_status (Player validation failed; 177)
+[2026-05-23T04:32:03.500+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-05-23T04:32:03.806+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

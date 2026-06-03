@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: esports
+    description: "Raw tables in our esports database"
+    database: postgres           # ← This should be your actual database name in RDS
+    schema: public
+    tables:
+      - name: players
+      - name: matches
+      - name: player_stats
+      - name: teams
+      - name: team_rosters
+      - name: tournaments
+      - name: elo_history
+      - name: prize_payouts
+      - name: player_bans
+      - name: audit_log
+
+
+      

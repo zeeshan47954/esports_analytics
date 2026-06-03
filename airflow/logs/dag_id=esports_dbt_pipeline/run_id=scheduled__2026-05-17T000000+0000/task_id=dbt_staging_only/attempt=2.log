@@ -1,0 +1,30 @@
+[2026-05-19T05:08:18.351+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: esports_dbt_pipeline.dbt_staging_only scheduled__2026-05-17T00:00:00+00:00 [queued]>
+[2026-05-19T05:08:18.366+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: esports_dbt_pipeline.dbt_staging_only scheduled__2026-05-17T00:00:00+00:00 [queued]>
+[2026-05-19T05:08:18.367+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 3
+[2026-05-19T05:08:18.395+0000] {taskinstance.py:2192} INFO - Executing <Task(BashOperator): dbt_staging_only> on 2026-05-17 00:00:00+00:00
+[2026-05-19T05:08:18.408+0000] {standard_task_runner.py:60} INFO - Started process 292 to run task
+[2026-05-19T05:08:18.421+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'esports_dbt_pipeline', 'dbt_staging_only', 'scheduled__2026-05-17T00:00:00+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/dag1.py', '--cfg-path', '/tmp/tmp3e5adaa7']
+[2026-05-19T05:08:18.441+0000] {standard_task_runner.py:88} INFO - Job 62: Subtask dbt_staging_only
+[2026-05-19T05:08:18.592+0000] {task_command.py:423} INFO - Running <TaskInstance: esports_dbt_pipeline.dbt_staging_only scheduled__2026-05-17T00:00:00+00:00 [running]> on host a210d1c06d24
+[2026-05-19T05:08:18.798+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='esports_dbt_pipeline' AIRFLOW_CTX_TASK_ID='dbt_staging_only' AIRFLOW_CTX_EXECUTION_DATE='2026-05-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-17T00:00:00+00:00'
+[2026-05-19T05:08:18.800+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-19T05:08:18.803+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker exec esports-dbt dbt run --select staging']
+[2026-05-19T05:08:18.827+0000] {subprocess.py:86} INFO - Output:
+[2026-05-19T05:08:22.698+0000] {subprocess.py:93} INFO - [0m05:08:22  Running with dbt=1.9.0
+[2026-05-19T05:08:22.705+0000] {subprocess.py:93} INFO - [0m05:08:22  Encountered an error:
+[2026-05-19T05:08:22.707+0000] {subprocess.py:93} INFO - Runtime Error
+[2026-05-19T05:08:22.708+0000] {subprocess.py:93} INFO -   No dbt_project.yml found at expected path /usr/app/dbt_project.yml
+[2026-05-19T05:08:22.709+0000] {subprocess.py:93} INFO -   Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+[2026-05-19T05:08:22.710+0000] {subprocess.py:93} INFO - 
+[2026-05-19T05:08:24.601+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-05-19T05:08:24.644+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-05-19T05:08:24.651+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=esports_dbt_pipeline, task_id=dbt_staging_only, execution_date=20260517T000000, start_date=20260519T050818, end_date=20260519T050824
+[2026-05-19T05:08:24.683+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 62 for task dbt_staging_only (Bash command failed. The command returned a non-zero exit code 2.; 292)
+[2026-05-19T05:08:24.717+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-05-19T05:08:24.769+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

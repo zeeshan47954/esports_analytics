@@ -1,0 +1,1 @@
+select * from (select player_id,(kills+assists)::numeric/(deaths)::numeric as kda  from player_stats)order by kda desc limit 10

@@ -1,0 +1,700 @@
+2026-05-22 13:24:01,990 - INFO - ✅ RDS Connection Successful
+2026-05-22 13:24:09,574 - ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-22 13:24:19,874 - ERROR - ❌ Error in load_new_matches_from_rds: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 101, in load_new_matches_from_rds
+    tgt_conn = psycopg2.connect(
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-05-22 13:24:26,392 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 242, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-22 13:24:37,967 - INFO - ✅ Fetched 501 players from database
+2026-05-22 13:24:38,309 - ERROR - ❌ Redis Cache Refresh Failed: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-22 13:24:55,905 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-22 13:25:06,436 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-22 13:34:16,213 - INFO - ✅ RDS Connection Successful
+2026-05-22 13:34:23,230 - ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-22 13:34:36,983 - ERROR - ❌ Error in load_new_matches_from_rds: connection to server at "localhost" (::1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 101, in load_new_matches_from_rds
+    tgt_conn = psycopg2.connect(
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-05-22 13:34:43,481 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 242, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-22 13:34:53,146 - INFO - ✅ Fetched 501 players from database
+2026-05-22 13:34:53,233 - ERROR - ❌ Redis Cache Refresh Failed: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-22 13:35:03,132 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-22 13:35:13,713 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-22 13:41:19,358 - INFO - ✅ RDS Connection Successful
+2026-05-22 13:41:23,993 - ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-22 13:41:32,046 - INFO - 📌 Creating watermark_pipeline table...
+2026-05-22 13:41:32,916 - INFO - 📅 Last successful run: 2020-01-01 00:00:00
+2026-05-22 13:41:33,050 - INFO - 📌 Creating new_matches table...
+2026-05-22 13:41:34,342 - INFO - 📦 Found 225 new matches to process
+2026-05-22 13:41:34,369 - ERROR - ❌ Error in load_new_matches_from_rds: insert or update on table "new_matches" violates foreign key constraint "new_matches_tournament_id_fkey"
+DETAIL:  Key (tournament_id)=(d965d018-e386-4444-b687-88a8f8987e26) is not present in table "tournaments".
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 187, in load_new_matches_from_rds
+    tgt_cur.execute("""
+psycopg2.errors.ForeignKeyViolation: insert or update on table "new_matches" violates foreign key constraint "new_matches_tournament_id_fkey"
+DETAIL:  Key (tournament_id)=(d965d018-e386-4444-b687-88a8f8987e26) is not present in table "tournaments".
+
+2026-05-22 13:41:41,139 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 242, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-22 13:41:49,785 - INFO - ✅ Fetched 501 players from database
+2026-05-22 13:41:49,860 - ERROR - ❌ Redis Cache Refresh Failed: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-22 13:42:07,209 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-22 13:42:17,021 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-22 13:46:47,162 - INFO - ✅ RDS Connection Successful
+2026-05-22 13:46:53,444 - ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-22 13:47:01,744 - INFO - 📅 Last successful run: 2026-05-22 13:41:31.825184+00:00
+2026-05-22 13:47:02,130 - INFO - ✅ No new matches found in this run.
+2026-05-22 13:47:08,582 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 242, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-22 13:47:22,990 - INFO - ✅ Fetched 501 players from database
+2026-05-22 13:47:23,060 - ERROR - ❌ Redis Cache Refresh Failed: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-22 13:47:41,872 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-22 13:47:52,737 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 03:45:16,775 - INFO - ✅ RDS Connection Successful
+2026-05-23 03:45:22,644 - ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-23 03:45:31,300 - INFO - 📌 Creating watermark_pipeline table...
+2026-05-23 03:45:32,140 - INFO - 📅 Last successful run: 2020-01-01 00:00:00
+2026-05-23 03:45:32,351 - INFO - 📌 Creating new_matches table...
+2026-05-23 03:45:32,365 - ERROR - ❌ Error in load_new_matches_from_rds: syntax error at or near ","
+LINE 7:                         winner_id UUID ),
+                                                ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 157, in load_new_matches_from_rds
+    tgt_cur.execute("""
+psycopg2.errors.SyntaxError: syntax error at or near ","
+LINE 7:                         winner_id UUID ),
+                                                ^
+
+2026-05-23 03:45:39,379 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 242, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 03:45:49,728 - INFO - ✅ Fetched 501 players from database
+2026-05-23 03:45:50,138 - ERROR - ❌ Redis Cache Refresh Failed: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-23 03:45:58,748 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 03:46:07,737 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 03:49:22,789 - INFO - ✅ RDS Connection Successful
+2026-05-23 03:49:26,282 - ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-23 03:49:32,042 - INFO - 📅 Last successful run: 2026-05-23 03:45:30.668443+00:00
+2026-05-23 03:49:32,058 - INFO - 📌 Creating new_matches table...
+2026-05-23 03:49:32,065 - ERROR - ❌ Error in load_new_matches_from_rds: syntax error at or near ","
+LINE 7:                         winner_id UUID ),
+                                                ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 157, in load_new_matches_from_rds
+    tgt_cur.execute("""
+psycopg2.errors.SyntaxError: syntax error at or near ","
+LINE 7:                         winner_id UUID ),
+                                                ^
+
+2026-05-23 03:49:38,566 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 242, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 03:49:47,869 - INFO - ✅ Fetched 501 players from database
+2026-05-23 03:49:47,906 - ERROR - ❌ Redis Cache Refresh Failed: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-23 03:49:56,562 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 03:50:05,064 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 04:12:52,694 - INFO - ✅ RDS Connection Successful
+2026-05-23 04:12:55,592 - ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-23 04:13:43,380 - INFO - ✅ RDS Connection Successful
+2026-05-23 04:13:46,124 - ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-23 04:14:58,218 - ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+2026-05-23 04:28:33,044 - INFO - ✅ Redis Health Check Passed
+2026-05-23 04:28:33,044 - INFO - ✅ Redis Health Check Passed
+2026-05-23 04:28:33,332 - INFO - ✅ Redis Health Check Passed
+2026-05-23 04:28:35,394 - ERROR - ❌ Critical Error in load_new_matches_from_rds: module 'boto3' has no attribute 'utils'
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 109, in load_new_matches_from_rds
+    s3 = boto3.client(
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/__init__.py", line 92, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/__init__.py", line 80, in _get_default_session
+    setup_default_session()
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/__init__.py", line 34, in setup_default_session
+    DEFAULT_SESSION = Session(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/session.py", line 91, in __init__
+    self._register_default_handlers()
+  File "/home/airflow/.local/lib/python3.8/site-packages/boto3/session.py", line 484, in _register_default_handlers
+    boto3.utils.lazy_call(
+AttributeError: module 'boto3' has no attribute 'utils'
+2026-05-23 04:28:35,535 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:28:35,723 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:28:38,213 - INFO - 📌 Creating watermark_pipeline table...
+2026-05-23 04:28:38,263 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 04:28:38,542 - INFO - ✅ Fetched 501 players from database
+2026-05-23 04:28:38,728 - INFO - ✅ Cached 501 players (0.08 MB) in Redis
+2026-05-23 04:28:38,889 - INFO - ✅ Fetched 501 players from database
+2026-05-23 04:28:39,085 - INFO - 📅 Last successful run: 2020-01-01 00:00:00
+2026-05-23 04:28:39,120 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 04:28:39,469 - INFO - ✅ Cached 501 players (0.08 MB) in Redis
+2026-05-23 04:28:39,475 - INFO - 📌 Creating new_matches table...
+2026-05-23 04:28:39,838 - INFO - ✅ new_matches table created successfully
+2026-05-23 04:28:40,973 - INFO - 📦 Found 239 new matches to process
+2026-05-23 04:28:43,328 - INFO - ✅ Successfully inserted 239 matches
+2026-05-23 04:28:44,750 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:28:44,757 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:28:44,883 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:28:44,886 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:28:46,006 - INFO - ✅ Uploaded 239 matches to S3 → matches/new_matches/match_20260523_042837.csv
+2026-05-23 04:29:35,520 - INFO - ✅ Redis Health Check Passed
+2026-05-23 04:29:37,338 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:29:39,030 - INFO - 📅 Last successful run: 2026-05-23 04:28:39.889508+00:00
+2026-05-23 04:29:39,058 - INFO - ✅ RDS Connection Successful
+2026-05-23 04:29:39,401 - INFO - ✅ No new matches found between 2026-05-23 04:28:39.889508+00:00 and 2026-05-23 04:29:37.901935
+2026-05-23 04:29:41,959 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 04:29:42,221 - INFO - ✅ Fetched 501 players from database
+2026-05-23 04:29:42,333 - INFO - ✅ Cached 501 players (0.08 MB) in Redis
+2026-05-23 04:29:44,251 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:29:44,255 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:30:42,668 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:30:42,728 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:30:44,063 - INFO - 📅 Last successful run: 2026-05-23 04:28:39.889508+00:00
+2026-05-23 04:30:44,387 - INFO - ✅ No new matches found between 2026-05-23 04:28:39.889508+00:00 and 2026-05-23 04:30:43.219640
+2026-05-23 04:30:49,605 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 04:30:50,064 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 04:32:03,000 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:32:14,604 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:32:14,606 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:32:32,049 - INFO - ✅ RDS Connection Successful
+2026-05-23 04:32:35,885 - INFO - ✅ Redis Health Check Passed
+2026-05-23 04:32:42,295 - INFO - 📅 Last successful run: 2026-05-23 04:28:39.889508+00:00
+2026-05-23 04:32:42,641 - INFO - ✅ No new matches found between 2026-05-23 04:28:39.889508+00:00 and 2026-05-23 04:32:41.439778
+2026-05-23 04:32:51,053 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:32:51,156 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:32:51,337 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:34:11,939 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:34:27,464 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:34:27,469 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:34:56,424 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:36:31,462 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:36:31,481 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:36:31,547 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:36:31,549 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:37:03,339 - ERROR - ❌ Player validation failed: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 257, in bulk_validate_player_status
+    cur.execute("SELECT player_id, kills, assists, deaths FROM players")
+psycopg2.errors.UndefinedColumn: column "player_id" does not exist
+LINE 1: SELECT player_id, kills, assists, deaths FROM players
+               ^
+
+2026-05-23 04:38:44,333 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:38:44,341 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:38:44,361 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:38:44,364 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:42:18,559 - INFO - ✅ RDS Connection Successful
+2026-05-23 04:42:24,102 - INFO - ✅ Redis Health Check Passed
+2026-05-23 04:42:30,116 - INFO - 📅 Last successful run: 2026-05-23 04:28:39.889508+00:00
+2026-05-23 04:42:30,451 - INFO - ✅ No new matches found between 2026-05-23 04:28:39.889508+00:00 and 2026-05-23 04:42:29.269279
+2026-05-23 04:42:41,804 - INFO - ✅ Player status validation completed. Issues: 0
+2026-05-23 04:42:51,123 - INFO - ✅ Fetched 501 players from database
+2026-05-23 04:42:51,218 - INFO - ✅ Cached 501 players (0.08 MB) in Redis
+2026-05-23 04:42:58,659 - ERROR - ❌ DBT Build Failed: Usage: dbt build [OPTIONS]
+Try 'dbt build -h' for help.
+
+Error: No such option: --output
+
+2026-05-23 04:42:58,661 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:46:10,123 - ERROR - ❌ DBT Build Failed with return code 1
+2026-05-23 04:46:10,125 - ERROR - DBT Error: 
+2026-05-23 04:46:10,126 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:48:18,048 - INFO - ✅ RDS Connection Successful
+2026-05-23 04:48:22,726 - INFO - ✅ Redis Health Check Passed
+2026-05-23 04:48:29,928 - INFO - 📅 Last successful run: 2026-05-23 04:28:39.889508+00:00
+2026-05-23 04:48:30,258 - INFO - ✅ No new matches found between 2026-05-23 04:28:39.889508+00:00 and 2026-05-23 04:48:29.120619
+2026-05-23 04:48:43,920 - INFO - ✅ Player status validation completed. Issues: 0
+2026-05-23 04:48:45,662 - ERROR - ❌ DBT Build Failed with return code 1
+2026-05-23 04:48:45,664 - ERROR - DBT Error: 
+2026-05-23 04:48:45,665 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:48:52,262 - INFO - ✅ Fetched 501 players from database
+2026-05-23 04:48:52,381 - INFO - ✅ Cached 501 players (0.08 MB) in Redis
+2026-05-23 04:49:19,914 - ERROR - ❌ DBT Build Failed with return code 1
+2026-05-23 04:49:19,916 - ERROR - DBT Error: 
+2026-05-23 04:49:19,920 - ERROR - ❌ DBT Build Error: DBT Build Failed
+2026-05-23 04:51:55,623 - ERROR - ❌ DBT Build Error: Task received SIGTERM signal
+2026-05-23 04:53:38,441 - INFO - ✅ RDS Connection Successful
+2026-05-23 04:53:42,243 - INFO - ✅ Redis Health Check Passed
+2026-05-23 04:53:48,628 - INFO - 📅 Last successful run: 2026-05-23 04:28:39.889508+00:00
+2026-05-23 04:53:48,924 - INFO - ✅ No new matches found between 2026-05-23 04:28:39.889508+00:00 and 2026-05-23 04:53:47.789631
+2026-05-23 04:54:00,097 - INFO - ✅ Player status validation completed. Issues: 0
+2026-05-23 04:54:08,686 - INFO - ✅ Fetched 501 players from database
+2026-05-23 04:54:08,738 - INFO - ✅ Cached 501 players (0.08 MB) in Redis
+2026-05-23 04:54:29,492 - INFO - ✅ DBT Build Completed Successfully
+2026-05-23 04:54:29,498 - INFO - DBT Output (last 10 lines):
+[0m04:54:21  2 of 3 START test not_null_stg_players_id ...................................... [RUN]
+[0m04:54:21  3 of 3 START test unique_stg_players_id ........................................ [RUN]
+[0m04:54:24  2 of 3 PASS not_null_stg_players_id ............................................ [[32mPASS[0m in 3.30s]
+[0m04:54:24  3 of 3 PASS unique_stg_players_id .............................................. [[32mPASS[0m in 3.30s]
+[0m04:54:27  
+[0m04:54:27  Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 20.67 seconds (20.67s).
+[0m04:54:27  
+[0m04:54:27  [32mCompleted successfully[0m
+[0m04:54:27  
+[0m04:54:27  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+2026-05-23 04:54:38,344 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 04:54:41,832 - INFO - ✅ DBT Build Completed Successfully
+2026-05-23 04:54:41,834 - INFO - DBT Output (last 10 lines):
+[0m04:54:31  2 of 3 START test not_null_stg_players_id ...................................... [RUN]
+[0m04:54:31  3 of 3 START test unique_stg_players_id ........................................ [RUN]
+[0m04:54:35  3 of 3 PASS unique_stg_players_id .............................................. [[32mPASS[0m in 3.83s]
+[0m04:54:36  2 of 3 PASS not_null_stg_players_id ............................................ [[32mPASS[0m in 4.94s]
+[0m04:54:39  
+[0m04:54:39  Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 22.26 seconds (22.26s).
+[0m04:54:40  
+[0m04:54:40  [32mCompleted successfully[0m
+[0m04:54:40  
+[0m04:54:40  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+2026-05-23 04:54:49,525 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 04:56:47,478 - ERROR - ❌ Maintenance Task Failed: (psycopg2.errors.ActiveSqlTransaction) VACUUM cannot run inside a transaction block
+
+[SQL: VACUUM ANALYZE alembic_version;]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+2026-05-23 04:56:56,876 - ERROR - ❌ Maintenance Task Failed: Task received SIGTERM signal
+2026-05-23 04:58:33,338 - INFO - ✅ RDS Connection Successful
+2026-05-23 04:58:36,707 - INFO - ✅ Redis Health Check Passed
+2026-05-23 04:58:44,921 - INFO - 📅 Last successful run: 2026-05-23 04:28:39.889508+00:00
+2026-05-23 04:58:45,270 - INFO - ✅ No new matches found between 2026-05-23 04:28:39.889508+00:00 and 2026-05-23 04:58:44.071023
+2026-05-23 04:58:58,785 - INFO - ✅ Player status validation completed. Issues: 0
+2026-05-23 04:59:07,635 - INFO - ✅ Fetched 501 players from database
+2026-05-23 04:59:07,675 - INFO - ✅ Cached 501 players (0.08 MB) in Redis
+2026-05-23 04:59:40,237 - INFO - ✅ DBT Build Completed Successfully
+2026-05-23 04:59:40,242 - INFO - DBT Output (last 10 lines):
+[0m04:59:32  2 of 3 START test not_null_stg_players_id ...................................... [RUN]
+[0m04:59:32  3 of 3 START test unique_stg_players_id ........................................ [RUN]
+[0m04:59:35  2 of 3 PASS not_null_stg_players_id ............................................ [[32mPASS[0m in 3.26s]
+[0m04:59:35  3 of 3 PASS unique_stg_players_id .............................................. [[32mPASS[0m in 3.33s]
+[0m04:59:38  
+[0m04:59:38  Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 20.64 seconds (20.64s).
+[0m04:59:38  
+[0m04:59:38  [32mCompleted successfully[0m
+[0m04:59:38  
+[0m04:59:38  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+2026-05-23 06:02:52,022 - INFO - ✅ RDS Connection Successful
+2026-05-23 06:02:56,379 - INFO - ✅ Redis Health Check Passed
+2026-05-23 06:03:27,297 - INFO - ✅ Successfully cached top 50 players in Redis (key: topplayers)
+2026-05-23 06:04:10,444 - INFO - ✅ DBT Build Completed Successfully
+2026-05-23 06:04:10,447 - INFO - DBT Output (last 10 lines):
+[0m06:04:00  2 of 3 START test not_null_stg_players_id ...................................... [RUN]
+[0m06:04:00  3 of 3 START test unique_stg_players_id ........................................ [RUN]
+[0m06:04:05  2 of 3 PASS not_null_stg_players_id ............................................ [[32mPASS[0m in 4.88s]
+[0m06:04:05  3 of 3 PASS unique_stg_players_id .............................................. [[32mPASS[0m in 4.63s]
+[0m06:04:08  
+[0m06:04:08  Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 26.47 seconds (26.47s).
+[0m06:04:08  
+[0m06:04:08  [32mCompleted successfully[0m
+[0m06:04:08  
+[0m06:04:08  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+2026-05-23 06:04:56,867 - INFO - ✅ Successfully cached top 50 players in Redis (key: topplayers)
+2026-05-23 06:10:19,240 - INFO - ✅ RDS Connection Successful
+2026-05-23 06:10:23,923 - INFO - ✅ RDS Connection Successful
+2026-05-23 06:10:25,842 - INFO - ✅ Redis Health Check Passed
+2026-05-23 06:10:28,976 - INFO - ✅ Redis Health Check Passed
+2026-05-23 06:10:34,448 - INFO - ✅ Successfully cached top 50 players in Redis (key: topplayers)
+2026-05-23 06:10:37,374 - INFO - ✅ Successfully cached top 50 players in Redis (key: topplayers)
+2026-05-23 06:11:10,878 - INFO - ✅ DBT Build Completed Successfully
+2026-05-23 06:11:10,892 - INFO - DBT Output (last 10 lines):
+[0m06:11:01  2 of 3 START test not_null_stg_players_id ...................................... [RUN]
+[0m06:11:01  3 of 3 START test unique_stg_players_id ........................................ [RUN]
+[0m06:11:05  2 of 3 PASS not_null_stg_players_id ............................................ [[32mPASS[0m in 3.70s]
+[0m06:11:05  3 of 3 PASS unique_stg_players_id .............................................. [[32mPASS[0m in 3.70s]
+[0m06:11:08  
+[0m06:11:08  Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 21.68 seconds (21.68s).
+[0m06:11:08  
+[0m06:11:08  [32mCompleted successfully[0m
+[0m06:11:08  
+[0m06:11:08  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+2026-05-23 06:11:12,080 - INFO - ✅ DBT Build Completed Successfully
+2026-05-23 06:11:12,100 - INFO - DBT Output (last 10 lines):
+[0m06:11:03  2 of 3 START test not_null_stg_players_id ...................................... [RUN]
+[0m06:11:03  3 of 3 START test unique_stg_players_id ........................................ [RUN]
+[0m06:11:06  2 of 3 PASS not_null_stg_players_id ............................................ [[32mPASS[0m in 3.43s]
+[0m06:11:06  3 of 3 PASS unique_stg_players_id .............................................. [[32mPASS[0m in 3.45s]
+[0m06:11:09  
+[0m06:11:09  Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 21.16 seconds (21.16s).
+[0m06:11:09  
+[0m06:11:09  [32mCompleted successfully[0m
+[0m06:11:09  
+[0m06:11:09  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+2026-05-23 06:57:21,819 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 06:57:21,823 - INFO - Local Path : D:\dbeaverbackup/backup_20260523_065721.sql.gz
+2026-05-23 06:57:21,825 - INFO - S3 Path    : s3://esports-data-zeeshan/backup/backup_20260523_065721.sql.gz
+2026-05-23 06:57:23,580 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 06:57:23,584 - INFO - Local Path : D:\dbeaverbackup/backup_20260523_065723.sql.gz
+2026-05-23 06:57:23,585 - INFO - S3 Path    : s3://esports-data-zeeshan/backup/backup_20260523_065723.sql.gz
+2026-05-23 06:57:25,118 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 06:57:25,130 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 106, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 06:57:26,137 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 06:57:26,141 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 106, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 06:59:29,321 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 06:59:29,326 - INFO - Local Path : D:\dbeaverbackup/backup_20260523_065929.sql.gz
+2026-05-23 06:59:29,328 - INFO - S3 Path    : s3://esports-data-zeeshan/backup/backup_20260523_065929.sql.gz
+2026-05-23 06:59:29,800 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 06:59:29,802 - INFO - Local Path : D:\dbeaverbackup/backup_20260523_065929.sql.gz
+2026-05-23 06:59:29,804 - INFO - S3 Path    : s3://esports-data-zeeshan/backup/backup_20260523_065929.sql.gz
+2026-05-23 06:59:31,928 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 06:59:31,930 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 106, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 06:59:32,446 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 06:59:32,449 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 106, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 07:02:09,291 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 07:02:09,295 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 07:02:09,886 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 07:02:12,938 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 07:02:12,958 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 07:02:12,993 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 07:02:13,002 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 86, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 07:02:12,971 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 86, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 07:02:13,042 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 86, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 07:02:59,193 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 07:03:01,862 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 07:03:01,869 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 86, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 07:04:16,815 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 07:04:19,279 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 07:04:19,282 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 86, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 07:05:03,776 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 07:05:06,247 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 07:05:06,249 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 86, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 07:06:21,972 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 07:06:24,294 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 07:06:24,298 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 86, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed
+2026-05-23 07:07:09,334 - INFO - Starting RDS Backup for database: postgres
+2026-05-23 07:07:11,888 - ERROR - pg_dump failed: pg_dump: error: aborting because of server version mismatch
+pg_dump: detail: server version: 18.3; pg_dump version: 16.1 (Debian 16.1-1.pgdg120+1)
+
+2026-05-23 07:07:11,890 - ERROR - ❌ Backup failed: pg_dump failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/month_pipeline.py", line 86, in backup_rds_to_local_and_s3
+    raise AirflowException("pg_dump failed")
+airflow.exceptions.AirflowException: pg_dump failed

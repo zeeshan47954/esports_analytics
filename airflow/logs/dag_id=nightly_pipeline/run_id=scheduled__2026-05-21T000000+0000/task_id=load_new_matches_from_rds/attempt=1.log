@@ -1,0 +1,13 @@
+[2026-05-22T12:01:24.531+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.load_new_matches_from_rds scheduled__2026-05-21T00:00:00+00:00 [queued]>
+[2026-05-22T12:01:24.560+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.load_new_matches_from_rds scheduled__2026-05-21T00:00:00+00:00 [queued]>
+[2026-05-22T12:01:24.562+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-22T12:01:24.608+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): load_new_matches_from_rds> on 2026-05-21 00:00:00+00:00
+[2026-05-22T12:01:24.634+0000] {standard_task_runner.py:60} INFO - Started process 184 to run task
+[2026-05-22T12:01:24.645+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'load_new_matches_from_rds', 'scheduled__2026-05-21T00:00:00+00:00', '--job-id', '147', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmpbz05n_mh']
+[2026-05-22T12:01:24.655+0000] {standard_task_runner.py:88} INFO - Job 147: Subtask load_new_matches_from_rds
+[2026-05-22T12:01:24.910+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.load_new_matches_from_rds scheduled__2026-05-21T00:00:00+00:00 [running]> on host 74e8a7aa2252
+[2026-05-22T12:01:25.245+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='load_new_matches_from_rds' AIRFLOW_CTX_EXECUTION_DATE='2026-05-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-21T00:00:00+00:00'
+[2026-05-22T12:01:25.289+0000] {python.py:201} INFO - Done. Returned value was: 0
+[2026-05-22T12:01:25.388+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=nightly_pipeline, task_id=load_new_matches_from_rds, execution_date=20260521T000000, start_date=20260522T120124, end_date=20260522T120125
+[2026-05-22T12:01:25.469+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-22T12:01:25.557+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

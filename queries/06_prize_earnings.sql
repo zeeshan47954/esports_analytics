@@ -1,0 +1,1 @@
+ select player_id,sum(amount) as total_amount from prize_payouts pp group by player_id 

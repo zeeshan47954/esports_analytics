@@ -1,0 +1,802 @@
+[
+  {
+    "id": "cd509ca0-a218-4614-8ee9-c5f73d0b9281",
+    "username": "player473",
+    "country": "Japan",
+    "date_of_birth": "2003-05-10",
+    "elo_rating": 1651,
+    "created_at": "2023-11-05 08:43:43.090836+00:00"
+  },
+  {
+    "id": "7cfa9b8f-1265-4b9d-a322-d4eb9de8033d",
+    "username": "player486",
+    "country": "India",
+    "date_of_birth": "2005-12-05",
+    "elo_rating": 1650,
+    "created_at": "2023-08-30 22:40:45.222036+00:00"
+  },
+  {
+    "id": "704f4807-fe05-4b0e-9abe-9806a5e0195a",
+    "username": "player484",
+    "country": "Poland",
+    "date_of_birth": "1996-01-26",
+    "elo_rating": 1644,
+    "created_at": "2025-06-05 00:28:58.066836+00:00"
+  },
+  {
+    "id": "60f850a1-64b7-4928-a82f-b38b4544c21f",
+    "username": "player477",
+    "country": "Poland",
+    "date_of_birth": "1999-12-11",
+    "elo_rating": 1624,
+    "created_at": "2024-08-10 13:26:39.740436+00:00"
+  },
+  {
+    "id": "4d89007b-bc9a-4a40-820e-c46e21a5c7e7",
+    "username": "player493",
+    "country": "South Korea",
+    "date_of_birth": "2005-03-26",
+    "elo_rating": 1617,
+    "created_at": "2025-11-28 16:32:52.354836+00:00"
+  },
+  {
+    "id": "cfa19f60-e886-4c42-a963-72afa1cd28fa",
+    "username": "player489",
+    "country": "Vietnam",
+    "date_of_birth": "2004-10-01",
+    "elo_rating": 1615,
+    "created_at": "2023-05-23 13:13:27.510036+00:00"
+  },
+  {
+    "id": "dfd3d949-1ff5-423a-b121-6e46c174fd87",
+    "username": "player483",
+    "country": "Vietnam",
+    "date_of_birth": "1998-06-17",
+    "elo_rating": 1589,
+    "created_at": "2024-05-24 21:00:51.135636+00:00"
+  },
+  {
+    "id": "8f657e4f-f0c4-4979-a91c-2340d5abf333",
+    "username": "player435",
+    "country": "France",
+    "date_of_birth": "1998-05-25",
+    "elo_rating": 1588,
+    "created_at": "2023-08-21 01:01:44.098836+00:00"
+  },
+  {
+    "id": "5b9e6619-5cd8-4511-8c53-ef07543f7ec8",
+    "username": "player490",
+    "country": "UK",
+    "date_of_birth": "2003-02-20",
+    "elo_rating": 1585,
+    "created_at": "2023-05-23 19:16:11.612436+00:00"
+  },
+  {
+    "id": "746e5125-eba0-46a6-8169-d016e514c60d",
+    "username": "player459",
+    "country": "China",
+    "date_of_birth": "2007-09-15",
+    "elo_rating": 1574,
+    "created_at": "2024-04-30 17:35:24.793236+00:00"
+  },
+  {
+    "id": "1e5059f2-8597-4ddf-b06f-89cc98c25ddb",
+    "username": "player465",
+    "country": "India",
+    "date_of_birth": "2007-09-15",
+    "elo_rating": 1566,
+    "created_at": "2024-11-24 17:30:37.772436+00:00"
+  },
+  {
+    "id": "576ee5db-96a4-4943-806a-2f72fc291084",
+    "username": "player398",
+    "country": "Denmark",
+    "date_of_birth": "2001-04-05",
+    "elo_rating": 1563,
+    "created_at": "2024-10-30 04:42:34.201236+00:00"
+  },
+  {
+    "id": "6db69ced-1fb7-48a7-a3fc-e5830bb64f10",
+    "username": "player387",
+    "country": "India",
+    "date_of_birth": "2000-03-03",
+    "elo_rating": 1563,
+    "created_at": "2023-09-08 15:01:01.014036+00:00"
+  },
+  {
+    "id": "c66a0b34-2d5d-44ea-9f6f-4b7ff635bb2b",
+    "username": "player442",
+    "country": "Turkey",
+    "date_of_birth": "1995-05-25",
+    "elo_rating": 1563,
+    "created_at": "2023-10-13 03:40:17.660436+00:00"
+  },
+  {
+    "id": "881562b7-f89c-43ce-b1f5-161d497efcd7",
+    "username": "player433",
+    "country": "South Korea",
+    "date_of_birth": "2005-03-26",
+    "elo_rating": 1560,
+    "created_at": "2025-11-14 09:35:10.249236+00:00"
+  },
+  {
+    "id": "19f7f03e-ef05-4afa-a8ba-915887592f00",
+    "username": "player397",
+    "country": "Vietnam",
+    "date_of_birth": "2003-02-20",
+    "elo_rating": 1554,
+    "created_at": "2023-08-28 17:11:56.818836+00:00"
+  },
+  {
+    "id": "4f628aa0-25bc-4327-94df-65dbcdd720e9",
+    "username": "player388",
+    "country": "Indonesia",
+    "date_of_birth": "2005-12-05",
+    "elo_rating": 1553,
+    "created_at": "2026-02-26 10:22:33.327636+00:00"
+  },
+  {
+    "id": "e2c66d0c-43db-46d2-a80b-982d1a9770bc",
+    "username": "player420",
+    "country": "Thailand",
+    "date_of_birth": "2004-08-09",
+    "elo_rating": 1553,
+    "created_at": "2026-01-31 19:21:43.532436+00:00"
+  },
+  {
+    "id": "1673a8a7-973b-412b-8fcf-0bac32561c40",
+    "username": "player417",
+    "country": "Denmark",
+    "date_of_birth": "2003-02-20",
+    "elo_rating": 1547,
+    "created_at": "2023-07-05 19:43:07.551636+00:00"
+  },
+  {
+    "id": "a14cff03-d03f-419f-b6e0-aad41314f945",
+    "username": "player470",
+    "country": "Russia",
+    "date_of_birth": "1997-10-29",
+    "elo_rating": 1547,
+    "created_at": "2023-06-25 05:26:24.418836+00:00"
+  },
+  {
+    "id": "dd2bee51-b4f4-4f32-9422-1210287c32b5",
+    "username": "player376",
+    "country": "Brazil",
+    "date_of_birth": "2004-11-28",
+    "elo_rating": 1545,
+    "created_at": "2025-09-17 23:24:39.874836+00:00"
+  },
+  {
+    "id": "630b89e7-8a8c-4887-9aa9-28c883abde1a",
+    "username": "player405",
+    "country": "South Korea",
+    "date_of_birth": "1997-10-29",
+    "elo_rating": 1541,
+    "created_at": "2024-01-14 12:24:33.193236+00:00"
+  },
+  {
+    "id": "cb43438a-a5a7-48a2-a518-f16e9ac128be",
+    "username": "player371",
+    "country": "Germany",
+    "date_of_birth": "1999-07-19",
+    "elo_rating": 1539,
+    "created_at": "2025-02-18 01:24:31.436436+00:00"
+  },
+  {
+    "id": "0e0ba048-fda2-4d14-bfc5-162da696af20",
+    "username": "player476",
+    "country": "UK",
+    "date_of_birth": "2000-11-14",
+    "elo_rating": 1535,
+    "created_at": "2026-01-18 12:25:08.530836+00:00"
+  },
+  {
+    "id": "cc7d3254-19e6-43f1-9d07-d30fc5a9816e",
+    "username": "player411",
+    "country": "Germany",
+    "date_of_birth": "2004-08-09",
+    "elo_rating": 1534,
+    "created_at": "2026-03-15 05:20:21.366036+00:00"
+  },
+  {
+    "id": "2de5dfec-5842-4386-ab4c-a577ad7a2cae",
+    "username": "player379",
+    "country": "Denmark",
+    "date_of_birth": "2001-05-25",
+    "elo_rating": 1532,
+    "created_at": "2023-12-28 04:59:58.662036+00:00"
+  },
+  {
+    "id": "f9229742-7542-491c-8e07-7edee7c6c862",
+    "username": "player418",
+    "country": "UK",
+    "date_of_birth": "2006-11-22",
+    "elo_rating": 1531,
+    "created_at": "2025-01-17 20:29:47.487636+00:00"
+  },
+  {
+    "id": "f797e77a-e1d4-4932-a4eb-639d6d3c90e3",
+    "username": "player499",
+    "country": "Sweden",
+    "date_of_birth": "1995-12-23",
+    "elo_rating": 1531,
+    "created_at": "2024-02-29 11:35:30.697236+00:00"
+  },
+  {
+    "id": "7da44263-9b38-4609-9128-e1ba900b298b",
+    "username": "player399",
+    "country": "Indonesia",
+    "date_of_birth": "2001-09-18",
+    "elo_rating": 1530,
+    "created_at": "2024-08-02 16:42:32.674836+00:00"
+  },
+  {
+    "id": "b42d25f8-22a3-418c-915f-afd966094fd6",
+    "username": "player367",
+    "country": "South Korea",
+    "date_of_birth": "1995-06-17",
+    "elo_rating": 1524,
+    "created_at": "2023-08-28 20:11:52.815636+00:00"
+  },
+  {
+    "id": "f60ca102-220a-43b9-90d8-da1e6317d8d0",
+    "username": "player362",
+    "country": "China",
+    "date_of_birth": "2000-03-03",
+    "elo_rating": 1506,
+    "created_at": "2024-07-18 07:36:54.649236+00:00"
+  },
+  {
+    "id": "b1df07d4-1131-4351-9f9b-f54f03865225",
+    "username": "player381",
+    "country": "Philippines",
+    "date_of_birth": "2002-06-12",
+    "elo_rating": 1504,
+    "created_at": "2024-10-04 13:57:16.575636+00:00"
+  },
+  {
+    "id": "54142b8e-e894-4473-b307-e30fa388abb4",
+    "username": "player356",
+    "country": "Thailand",
+    "date_of_birth": "2005-12-05",
+    "elo_rating": 1497,
+    "created_at": "2025-01-10 03:46:13.369236+00:00"
+  },
+  {
+    "id": "59d9537d-dca3-44f8-893f-f1aecbda030e",
+    "username": "player366",
+    "country": "Sweden",
+    "date_of_birth": "2004-08-09",
+    "elo_rating": 1494,
+    "created_at": "2023-11-10 06:49:02.194836+00:00"
+  },
+  {
+    "id": "3939b79d-f086-4e32-9a0f-e8c0f4518c3a",
+    "username": "player373",
+    "country": "Turkey",
+    "date_of_birth": "1999-12-11",
+    "elo_rating": 1493,
+    "created_at": "2023-06-17 15:18:58.220436+00:00"
+  },
+  {
+    "id": "aa848e3d-441e-440c-aeb6-9c59d99e1c83",
+    "username": "player315",
+    "country": "Indonesia",
+    "date_of_birth": "2002-06-12",
+    "elo_rating": 1490,
+    "created_at": "2024-06-26 23:10:08.329236+00:00"
+  },
+  {
+    "id": "b01bdc4e-8a73-4d5a-a1f0-0f29f0d2b279",
+    "username": "player412",
+    "country": "Turkey",
+    "date_of_birth": "1999-12-11",
+    "elo_rating": 1490,
+    "created_at": "2025-03-14 10:49:01.878036+00:00"
+  },
+  {
+    "id": "12c89a6d-1489-4b39-90e1-d2ad1f5730a9",
+    "username": "player480",
+    "country": "Germany",
+    "date_of_birth": "2006-02-07",
+    "elo_rating": 1487,
+    "created_at": "2023-08-11 11:46:39.462036+00:00"
+  },
+  {
+    "id": "5186b8fe-3a10-4b71-8e91-02e03b9aadbd",
+    "username": "player475",
+    "country": "China",
+    "date_of_birth": "1995-05-25",
+    "elo_rating": 1487,
+    "created_at": "2026-03-22 01:17:13.935636+00:00"
+  },
+  {
+    "id": "2b5a6dbb-e1dd-4eb3-ba8f-50a3b1ba7696",
+    "username": "player413",
+    "country": "Thailand",
+    "date_of_birth": "1995-05-25",
+    "elo_rating": 1484,
+    "created_at": "2024-06-29 16:30:59.055636+00:00"
+  },
+  {
+    "id": "b8d5584d-75f8-470e-ac35-d1ede3d2714f",
+    "username": "player485",
+    "country": "Philippines",
+    "date_of_birth": "1999-12-11",
+    "elo_rating": 1484,
+    "created_at": "2025-02-07 19:09:06.409236+00:00"
+  },
+  {
+    "id": "0335139d-7f9a-4909-8e92-7cb0f9df1e1f",
+    "username": "player320",
+    "country": "Philippines",
+    "date_of_birth": "2007-07-02",
+    "elo_rating": 1479,
+    "created_at": "2024-10-24 02:26:05.324436+00:00"
+  },
+  {
+    "id": "eabdc1bb-0780-472e-9208-8cbd46939df7",
+    "username": "player464",
+    "country": "Thailand",
+    "date_of_birth": "1997-04-08",
+    "elo_rating": 1479,
+    "created_at": "2023-12-02 03:33:38.982036+00:00"
+  },
+  {
+    "id": "107668bd-a95a-4a0f-9430-8dd69d209928",
+    "username": "player408",
+    "country": "USA",
+    "date_of_birth": "1996-01-26",
+    "elo_rating": 1477,
+    "created_at": "2023-06-22 23:09:26.108436+00:00"
+  },
+  {
+    "id": "88740a3f-0c79-4d15-8513-3570e0bf042a",
+    "username": "player382",
+    "country": "Philippines",
+    "date_of_birth": "2000-11-14",
+    "elo_rating": 1474,
+    "created_at": "2023-09-01 08:44:11.372436+00:00"
+  },
+  {
+    "id": "065353b1-8485-4a91-92f9-a69d5b2c49af",
+    "username": "player302",
+    "country": "India",
+    "date_of_birth": "1998-05-25",
+    "elo_rating": 1471,
+    "created_at": "2024-01-05 21:00:18.591636+00:00"
+  },
+  {
+    "id": "ec4f0108-558d-4207-9264-02e4e1dee2e7",
+    "username": "player468",
+    "country": "Vietnam",
+    "date_of_birth": "2007-07-02",
+    "elo_rating": 1471,
+    "created_at": "2023-09-17 11:00:41.602836+00:00"
+  },
+  {
+    "id": "bd6a0b78-f7f8-4e68-b151-90bd110b00c3",
+    "username": "player472",
+    "country": "Australia",
+    "date_of_birth": "2000-03-03",
+    "elo_rating": 1471,
+    "created_at": "2024-02-12 15:07:14.348436+00:00"
+  },
+  {
+    "id": "c8fb2b11-bd2f-4958-80f1-abf88ef1e195",
+    "username": "player386",
+    "country": "Germany",
+    "date_of_birth": "1996-09-15",
+    "elo_rating": 1469,
+    "created_at": "2024-02-10 15:06:42.092436+00:00"
+  },
+  {
+    "id": "05112b5c-0914-4167-9818-793ea1d58fc7",
+    "username": "player368",
+    "country": "China",
+    "date_of_birth": "2005-03-26",
+    "elo_rating": 1469,
+    "created_at": "2024-06-10 10:00:11.391636+00:00"
+  },
+  {
+    "id": "ce86c6c2-8937-49f6-8b05-7674f16ad23f",
+    "username": "player427",
+    "country": "Denmark",
+    "date_of_birth": "1995-06-17",
+    "elo_rating": 1467,
+    "created_at": "2025-11-17 11:23:34.498836+00:00"
+  },
+  {
+    "id": "040352e1-8f83-45d2-836f-78182cc27f02",
+    "username": "player301",
+    "country": "UK",
+    "date_of_birth": "2001-09-18",
+    "elo_rating": 1465,
+    "created_at": "2025-08-02 10:46:15.327636+00:00"
+  },
+  {
+    "id": "be241b3f-f435-465e-b827-c7dafeac048a",
+    "username": "player422",
+    "country": "Thailand",
+    "date_of_birth": "1997-04-08",
+    "elo_rating": 1464,
+    "created_at": "2023-05-20 19:35:17.362836+00:00"
+  },
+  {
+    "id": "a0165363-ca9a-454c-9ab0-20ff6b077051",
+    "username": "player421",
+    "country": "Philippines",
+    "date_of_birth": "2003-05-10",
+    "elo_rating": 1462,
+    "created_at": "2025-05-11 11:23:44.751636+00:00"
+  },
+  {
+    "id": "5b2b6ce7-9735-4489-9b3b-de6ce5086120",
+    "username": "player281",
+    "country": "Indonesia",
+    "date_of_birth": "1996-09-15",
+    "elo_rating": 1460,
+    "created_at": "2024-10-19 06:02:33.260436+00:00"
+  },
+  {
+    "id": "a631d964-48b5-4ddc-b7cf-e88b67477268",
+    "username": "player406",
+    "country": "Brazil",
+    "date_of_birth": "2007-09-15",
+    "elo_rating": 1458,
+    "created_at": "2024-03-02 05:32:07.887636+00:00"
+  },
+  {
+    "id": "16141775-cc70-4c7c-b426-923b6de1ee32",
+    "username": "player303",
+    "country": "Sweden",
+    "date_of_birth": "1995-05-25",
+    "elo_rating": 1458,
+    "created_at": "2023-04-25 13:41:32.626836+00:00"
+  },
+  {
+    "id": "bfaf1367-6fe9-44b2-80c8-60c89f3d5974",
+    "username": "player491",
+    "country": "UK",
+    "date_of_birth": "2001-09-18",
+    "elo_rating": 1451,
+    "created_at": "2025-10-23 07:11:11.372436+00:00"
+  },
+  {
+    "id": "38cec5ae-f0c6-4c6a-89bf-ae092999e91b",
+    "username": "player288",
+    "country": "Indonesia",
+    "date_of_birth": "1995-06-17",
+    "elo_rating": 1448,
+    "created_at": "2025-05-29 13:55:07.666836+00:00"
+  },
+  {
+    "id": "44bae9c9-e16d-44e8-bd89-88783c1925de",
+    "username": "player271",
+    "country": "France",
+    "date_of_birth": "2001-09-18",
+    "elo_rating": 1447,
+    "created_at": "2025-02-12 06:41:50.511636+00:00"
+  },
+  {
+    "id": "40a7d7a4-9078-40c0-b866-ccc969bf6c8d",
+    "username": "player446",
+    "country": "Turkey",
+    "date_of_birth": "2007-09-15",
+    "elo_rating": 1446,
+    "created_at": "2023-06-28 04:40:06.716436+00:00"
+  },
+  {
+    "id": "fcd783ec-afe8-4d3a-b7eb-6b6f5a01e0f2",
+    "username": "player423",
+    "country": "France",
+    "date_of_birth": "2001-04-05",
+    "elo_rating": 1444,
+    "created_at": "2024-11-29 05:54:18.102036+00:00"
+  },
+  {
+    "id": "19aa0be4-159f-4e96-9d05-108e2a64804d",
+    "username": "player351",
+    "country": "USA",
+    "date_of_birth": "2004-11-28",
+    "elo_rating": 1443,
+    "created_at": "2023-08-01 10:22:11.410836+00:00"
+  },
+  {
+    "id": "058c7a7f-0363-4a61-8c50-9fc13b3558f5",
+    "username": "player264",
+    "country": "Germany",
+    "date_of_birth": "1996-01-26",
+    "elo_rating": 1443,
+    "created_at": "2025-04-30 07:26:11.084436+00:00"
+  },
+  {
+    "id": "a3112268-4b9d-4c40-8ac0-1eda304feebb",
+    "username": "player358",
+    "country": "China",
+    "date_of_birth": "1997-04-08",
+    "elo_rating": 1443,
+    "created_at": "2026-04-11 14:21:59.516436+00:00"
+  },
+  {
+    "id": "0b351994-8548-40b5-aacd-9416f020ebd3",
+    "username": "player389",
+    "country": "China",
+    "date_of_birth": "2003-05-10",
+    "elo_rating": 1442,
+    "created_at": "2024-09-07 20:20:12.697236+00:00"
+  },
+  {
+    "id": "42a9b30d-df2a-43c4-b019-2b747be8110c",
+    "username": "player294",
+    "country": "Sweden",
+    "date_of_birth": "1997-10-29",
+    "elo_rating": 1440,
+    "created_at": "2025-11-13 14:52:24.687636+00:00"
+  },
+  {
+    "id": "369c2b2a-2d27-4ae3-8eba-fe6a1dddd12f",
+    "username": "player295",
+    "country": "Thailand",
+    "date_of_birth": "2001-05-25",
+    "elo_rating": 1437,
+    "created_at": "2025-05-14 09:52:07.206036+00:00"
+  },
+  {
+    "id": "39462614-8965-40e1-ae57-5911b04e6680",
+    "username": "player261",
+    "country": "Poland",
+    "date_of_birth": "2005-03-26",
+    "elo_rating": 1434,
+    "created_at": "2023-12-14 10:31:10.806036+00:00"
+  },
+  {
+    "id": "82b6a036-b9c4-476b-b641-7f2c3144b9a5",
+    "username": "player374",
+    "country": "China",
+    "date_of_birth": "1996-01-26",
+    "elo_rating": 1432,
+    "created_at": "2025-04-01 14:15:43.417236+00:00"
+  },
+  {
+    "id": "422c5474-b54d-4677-8e4d-4aa1aa5afae4",
+    "username": "player266",
+    "country": "USA",
+    "date_of_birth": "1995-05-25",
+    "elo_rating": 1431,
+    "created_at": "2024-06-06 21:15:47.074836+00:00"
+  },
+  {
+    "id": "6cf6d2a5-a49c-4e50-91d9-2b705a8ae9e3",
+    "username": "player253",
+    "country": "India",
+    "date_of_birth": "1997-10-29",
+    "elo_rating": 1426,
+    "created_at": "2024-07-10 04:46:11.036436+00:00"
+  },
+  {
+    "id": "657699a1-d6fe-4094-99cc-698eb35b6968",
+    "username": "player321",
+    "country": "Russia",
+    "date_of_birth": "2002-06-12",
+    "elo_rating": 1422,
+    "created_at": "2025-08-19 10:37:39.519636+00:00"
+  },
+  {
+    "id": "94278881-06af-470d-980d-e5c51b843242",
+    "username": "player429",
+    "country": "Brazil",
+    "date_of_birth": "1998-06-17",
+    "elo_rating": 1420,
+    "created_at": "2023-04-28 11:47:04.172436+00:00"
+  },
+  {
+    "id": "980624e2-f7a6-403c-a13f-955e3c23406f",
+    "username": "player347",
+    "country": "Poland",
+    "date_of_birth": "2001-04-05",
+    "elo_rating": 1419,
+    "created_at": "2025-11-08 17:10:19.791636+00:00"
+  },
+  {
+    "id": "b7595490-92d2-409e-948e-30de99df7396",
+    "username": "player267",
+    "country": "Philippines",
+    "date_of_birth": "1997-10-29",
+    "elo_rating": 1418,
+    "created_at": "2023-08-06 00:53:12.841236+00:00"
+  },
+  {
+    "id": "ce8f126f-95cc-4607-ac23-b361c36951e4",
+    "username": "player272",
+    "country": "Brazil",
+    "date_of_birth": "2007-09-15",
+    "elo_rating": 1418,
+    "created_at": "2024-10-01 02:27:42.668436+00:00"
+  },
+  {
+    "id": "d25e8cf7-8e3a-412b-9a8d-b59e273bd8d6",
+    "username": "player451",
+    "country": "Thailand",
+    "date_of_birth": "2001-05-25",
+    "elo_rating": 1417,
+    "created_at": "2024-02-29 08:24:40.047636+00:00"
+  },
+  {
+    "id": "efc82734-e754-494c-83c1-5f53b2c27c91",
+    "username": "player330",
+    "country": "Japan",
+    "date_of_birth": "2000-11-14",
+    "elo_rating": 1417,
+    "created_at": "2024-08-22 03:08:03.510036+00:00"
+  },
+  {
+    "id": "5fc0e655-e52e-4c2c-9acc-75b2a67ee67d",
+    "username": "player249",
+    "country": "Indonesia",
+    "date_of_birth": "2004-08-09",
+    "elo_rating": 1417,
+    "created_at": "2025-12-31 04:55:25.062036+00:00"
+  },
+  {
+    "id": "3a52e0bc-22e0-4693-b13a-0cc5d09f11eb",
+    "username": "player492",
+    "country": "Japan",
+    "date_of_birth": "2000-03-03",
+    "elo_rating": 1417,
+    "created_at": "2025-09-10 18:52:32.665236+00:00"
+  },
+  {
+    "id": "d472352f-166b-4212-8575-4c81603d98cd",
+    "username": "player263",
+    "country": "Sweden",
+    "date_of_birth": "2000-11-14",
+    "elo_rating": 1416,
+    "created_at": "2023-04-21 07:52:07.839636+00:00"
+  },
+  {
+    "id": "65a6aef3-7cec-4787-94ce-c391d14e238c",
+    "username": "player458",
+    "country": "Turkey",
+    "date_of_birth": "1998-06-17",
+    "elo_rating": 1415,
+    "created_at": "2024-06-05 19:44:40.431636+00:00"
+  },
+  {
+    "id": "7861e1a5-f424-442e-b7f4-3803e567e03d",
+    "username": "player279",
+    "country": "Japan",
+    "date_of_birth": "2005-12-05",
+    "elo_rating": 1413,
+    "created_at": "2024-02-05 15:11:35.766036+00:00"
+  },
+  {
+    "id": "c0d065a8-c2d1-47c3-bb33-4d725e1eb623",
+    "username": "player310",
+    "country": "France",
+    "date_of_birth": "1998-06-17",
+    "elo_rating": 1412,
+    "created_at": "2024-05-24 15:48:29.823636+00:00"
+  },
+  {
+    "id": "b8f90b1e-27be-4895-9d4d-4b3c98b7bdaf",
+    "username": "player471",
+    "country": "Thailand",
+    "date_of_birth": "1997-04-08",
+    "elo_rating": 1412,
+    "created_at": "2024-12-01 22:02:42.188436+00:00"
+  },
+  {
+    "id": "a734464f-673d-4fec-adf3-4be88cee575f",
+    "username": "player425",
+    "country": "UK",
+    "date_of_birth": "2006-11-22",
+    "elo_rating": 1411,
+    "created_at": "2024-09-26 20:16:51.154836+00:00"
+  },
+  {
+    "id": "a52fc6f5-0009-4fa8-9f0d-ae95bdb71519",
+    "username": "player453",
+    "country": "Denmark",
+    "date_of_birth": "2004-08-09",
+    "elo_rating": 1409,
+    "created_at": "2025-02-15 23:12:55.772436+00:00"
+  },
+  {
+    "id": "ca87ef42-0411-4df4-b363-25bf4d2f1f6d",
+    "username": "player448",
+    "country": "China",
+    "date_of_birth": "1999-07-19",
+    "elo_rating": 1409,
+    "created_at": "2025-04-05 17:43:54.265236+00:00"
+  },
+  {
+    "id": "9d10566c-a9b3-45f5-921e-69f5460d48b4",
+    "username": "player380",
+    "country": "Vietnam",
+    "date_of_birth": "1997-04-08",
+    "elo_rating": 1409,
+    "created_at": "2025-12-14 18:51:03.817236+00:00"
+  },
+  {
+    "id": "f7fadb05-d681-454d-8f81-a23bc6810e42",
+    "username": "player339",
+    "country": "Australia",
+    "date_of_birth": "2003-05-10",
+    "elo_rating": 1408,
+    "created_at": "2025-01-31 14:21:30.860436+00:00"
+  },
+  {
+    "id": "52de7a59-8dcb-4702-b5d7-50b0000fd854",
+    "username": "player428",
+    "country": "Australia",
+    "date_of_birth": "2001-05-25",
+    "elo_rating": 1408,
+    "created_at": "2024-07-19 13:36:05.631636+00:00"
+  },
+  {
+    "id": "1171b6f9-0b20-4c59-8753-47ac1c75583a",
+    "username": "player293",
+    "country": "Brazil",
+    "date_of_birth": "2004-08-09",
+    "elo_rating": 1408,
+    "created_at": "2024-10-15 19:52:08.617236+00:00"
+  },
+  {
+    "id": "4104b7fc-7c63-4b18-8ac8-24adeaf03bb0",
+    "username": "player444",
+    "country": "Brazil",
+    "date_of_birth": "2006-02-07",
+    "elo_rating": 1405,
+    "created_at": "2025-10-15 11:19:56.914836+00:00"
+  },
+  {
+    "id": "14356c4b-e99e-43dd-b61b-688aea1de1e9",
+    "username": "player296",
+    "country": "France",
+    "date_of_birth": "2001-05-25",
+    "elo_rating": 1405,
+    "created_at": "2023-09-14 13:37:34.335636+00:00"
+  },
+  {
+    "id": "66ab3ef2-74e9-416a-b456-5eaaab3a9792",
+    "username": "player400",
+    "country": "Germany",
+    "date_of_birth": "2005-03-26",
+    "elo_rating": 1403,
+    "created_at": "2025-03-31 12:03:04.508436+00:00"
+  },
+  {
+    "id": "41f219f6-a2ff-42cb-a537-da8b57d86516",
+    "username": "player357",
+    "country": "China",
+    "date_of_birth": "2001-09-18",
+    "elo_rating": 1402,
+    "created_at": "2023-06-20 05:52:08.617236+00:00"
+  },
+  {
+    "id": "34725384-4b19-4888-b126-a1b1adeb5541",
+    "username": "player353",
+    "country": "Poland",
+    "date_of_birth": "1999-12-11",
+    "elo_rating": 1401,
+    "created_at": "2024-04-25 19:08:29.804436+00:00"
+  },
+  {
+    "id": "5fc6b589-633f-4458-9c6d-097c61b912e5",
+    "username": "player260",
+    "country": "Canada",
+    "date_of_birth": "1998-05-25",
+    "elo_rating": 1401,
+    "created_at": "2023-12-04 01:56:14.223636+00:00"
+  },
+  {
+    "id": "5b82339a-eec8-4004-8446-836be50e0a8e",
+    "username": "player259",
+    "country": "UK",
+    "date_of_birth": "1995-06-17",
+    "elo_rating": 1398,
+    "created_at": "2025-06-06 16:27:28.354836+00:00"
+  }
+]

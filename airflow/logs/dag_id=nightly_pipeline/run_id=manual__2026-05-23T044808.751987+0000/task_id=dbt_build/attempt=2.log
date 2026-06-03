@@ -1,0 +1,48 @@
+[2026-05-23T04:51:21.798+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.dbt_build manual__2026-05-23T04:48:08.751987+00:00 [queued]>
+[2026-05-23T04:51:21.814+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.dbt_build manual__2026-05-23T04:48:08.751987+00:00 [queued]>
+[2026-05-23T04:51:21.815+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 3
+[2026-05-23T04:51:21.854+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): dbt_build> on 2026-05-23 04:48:08.751987+00:00
+[2026-05-23T04:51:21.868+0000] {standard_task_runner.py:60} INFO - Started process 276 to run task
+[2026-05-23T04:51:21.875+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'dbt_build', 'manual__2026-05-23T04:48:08.751987+00:00', '--job-id', '272', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmp2af0jy92']
+[2026-05-23T04:51:21.881+0000] {standard_task_runner.py:88} INFO - Job 272: Subtask dbt_build
+[2026-05-23T04:51:22.020+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.dbt_build manual__2026-05-23T04:48:08.751987+00:00 [running]> on host 127bb5de3bc4
+[2026-05-23T04:51:22.360+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='dbt_build' AIRFLOW_CTX_EXECUTION_DATE='2026-05-23T04:48:08.751987+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-23T04:48:08.751987+00:00'
+[2026-05-23T04:51:55.366+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2026-05-23T04:51:55.541+0000] {process_utils.py:131} INFO - Sending 15 to group 276. PIDs of all processes in the group: [277, 276]
+[2026-05-23T04:51:55.545+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 276
+[2026-05-23T04:51:55.566+0000] {taskinstance.py:2451} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-05-23T04:51:55.645+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=277, status='terminated', started='04:51:22') (277) terminated with exit code None
+[2026-05-23T04:51:55.623+0000] {nightlypipeline.py:326} ERROR - ❌ DBT Build Error: Task received SIGTERM signal
+[2026-05-23T04:51:55.794+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 298, in dbt_build_with_xcom
+    result = subprocess.run(
+  File "/usr/local/lib/python3.8/subprocess.py", line 495, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/local/lib/python3.8/subprocess.py", line 1028, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/local/lib/python3.8/subprocess.py", line 1884, in _communicate
+    ready = selector.select(timeout)
+  File "/usr/local/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2453, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/nightlypipeline.py", line 327, in dbt_build_with_xcom
+    raise AirflowException("DBT Build failed") from e
+airflow.exceptions.AirflowException: DBT Build failed
+[2026-05-23T04:51:55.879+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=nightly_pipeline, task_id=dbt_build, execution_date=20260523T044808, start_date=20260523T045121, end_date=20260523T045155
+[2026-05-23T04:51:55.998+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 272 for task dbt_build (DBT Build failed; 276)
+[2026-05-23T04:51:56.069+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=276, status='terminated', exitcode=1, started='04:51:21') (276) terminated with exit code 1
+[2026-05-23T04:51:56.072+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 143
+[2026-05-23T04:51:56.159+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

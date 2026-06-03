@@ -1,0 +1,34 @@
+[2026-05-23T04:45:42.265+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.dbt_build manual__2026-05-23T04:42:11.130737+00:00 [queued]>
+[2026-05-23T04:45:42.293+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.dbt_build manual__2026-05-23T04:42:11.130737+00:00 [queued]>
+[2026-05-23T04:45:42.295+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 3
+[2026-05-23T04:45:42.356+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): dbt_build> on 2026-05-23 04:42:11.130737+00:00
+[2026-05-23T04:45:42.374+0000] {standard_task_runner.py:60} INFO - Started process 171 to run task
+[2026-05-23T04:45:42.385+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'dbt_build', 'manual__2026-05-23T04:42:11.130737+00:00', '--job-id', '264', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmp5p5v3c44']
+[2026-05-23T04:45:42.395+0000] {standard_task_runner.py:88} INFO - Job 264: Subtask dbt_build
+[2026-05-23T04:45:42.560+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.dbt_build manual__2026-05-23T04:42:11.130737+00:00 [running]> on host 127bb5de3bc4
+[2026-05-23T04:45:42.868+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='dbt_build' AIRFLOW_CTX_EXECUTION_DATE='2026-05-23T04:42:11.130737+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-23T04:42:11.130737+00:00'
+[2026-05-23T04:46:10.123+0000] {nightlypipeline.py:316} ERROR - ❌ DBT Build Failed with return code 1
+[2026-05-23T04:46:10.125+0000] {nightlypipeline.py:317} ERROR - DBT Error: 
+[2026-05-23T04:46:10.126+0000] {nightlypipeline.py:326} ERROR - ❌ DBT Build Error: DBT Build Failed
+[2026-05-23T04:46:10.150+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/nightlypipeline.py", line 318, in dbt_build_with_xcom
+    raise AirflowException("DBT Build Failed")
+airflow.exceptions.AirflowException: DBT Build Failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/nightlypipeline.py", line 327, in dbt_build_with_xcom
+    raise AirflowException("DBT Build failed") from e
+airflow.exceptions.AirflowException: DBT Build failed
+[2026-05-23T04:46:10.161+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=nightly_pipeline, task_id=dbt_build, execution_date=20260523T044211, start_date=20260523T044542, end_date=20260523T044610
+[2026-05-23T04:46:10.197+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 264 for task dbt_build (DBT Build failed; 171)
+[2026-05-23T04:46:10.246+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-05-23T04:46:10.307+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

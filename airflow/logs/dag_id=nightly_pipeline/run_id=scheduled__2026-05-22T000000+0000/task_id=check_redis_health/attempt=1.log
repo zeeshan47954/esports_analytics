@@ -1,0 +1,14 @@
+[2026-05-23T03:45:21.974+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nightly_pipeline.check_redis_health scheduled__2026-05-22T00:00:00+00:00 [queued]>
+[2026-05-23T03:45:22.019+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nightly_pipeline.check_redis_health scheduled__2026-05-22T00:00:00+00:00 [queued]>
+[2026-05-23T03:45:22.020+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-05-23T03:45:22.097+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): check_redis_health> on 2026-05-22 00:00:00+00:00
+[2026-05-23T03:45:22.161+0000] {standard_task_runner.py:60} INFO - Started process 174 to run task
+[2026-05-23T03:45:22.177+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'nightly_pipeline', 'check_redis_health', 'scheduled__2026-05-22T00:00:00+00:00', '--job-id', '194', '--raw', '--subdir', 'DAGS_FOLDER/nightlypipeline.py', '--cfg-path', '/tmp/tmpv6gex1x3']
+[2026-05-23T03:45:22.184+0000] {standard_task_runner.py:88} INFO - Job 194: Subtask check_redis_health
+[2026-05-23T03:45:22.362+0000] {task_command.py:423} INFO - Running <TaskInstance: nightly_pipeline.check_redis_health scheduled__2026-05-22T00:00:00+00:00 [running]> on host 74e8a7aa2252
+[2026-05-23T03:45:22.634+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='nightly_pipeline' AIRFLOW_CTX_TASK_ID='check_redis_health' AIRFLOW_CTX_EXECUTION_DATE='2026-05-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-22T00:00:00+00:00'
+[2026-05-23T03:45:22.644+0000] {nightlypipeline.py:85} ERROR - ❌ Redis Health Check Error: Error 111 connecting to localhost:6379. Connection refused.
+[2026-05-23T03:45:22.646+0000] {python.py:201} INFO - Done. Returned value was: 0
+[2026-05-23T03:45:22.725+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=nightly_pipeline, task_id=check_redis_health, execution_date=20260522T000000, start_date=20260523T034521, end_date=20260523T034522
+[2026-05-23T03:45:22.803+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-23T03:45:22.883+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check
