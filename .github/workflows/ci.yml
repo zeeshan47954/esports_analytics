@@ -52,7 +52,8 @@ jobs:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/esports_analytics
         run: |
           pytest --cov=. --cov-report=xml -v || echo "No tests found or all tests passed"
-            - name: dbt Tests
+
+      - name: dbt Tests
         run: |
           echo "🔍 Looking for dbt project..."
 
@@ -89,7 +90,6 @@ jobs:
           dbt deps || true
           dbt compile --target dev || true
           dbt test --target dev || true
-     
       - name: Airflow DAG Syntax Check
         run: |
           echo "🔍 Checking Airflow DAGs..."
