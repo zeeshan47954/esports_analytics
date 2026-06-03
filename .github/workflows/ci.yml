@@ -98,23 +98,22 @@ jobs:
         run: |
           echo "Checking Airflow DAGs..."
           mkdir -p airflow/logs
-
-          cat > /tmp/check_dags.py << 'PYEOF'
+          
+          python -c "
 import os
 import sys
-sys.path.append(".")
+sys.path.append('.')
 
 from airflow.models import DagBag
 
-dagbag = DagBag(dag_folder="airflow/dags", include_examples=False)
+dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
 
-print("Number of DAGs found:", len(dagbag.dags))
-print("DAG Load Errors:", dagbag.import_errors)
+print('Number of DAGs found:', len(dagbag.dags))
+print('DAG Load Errors:', dagbag.import_errors)
 
 if dagbag.import_errors:
-    print("Some DAGs failed to load")
+    print('Some DAGs failed to load')
+    sys.exit(1)
 else:
-    print("All DAGs loaded successfully")
-PYEOF
-
-          python /tmp/check_dags.py
+    print('All DAGs loaded successfully')
+"
