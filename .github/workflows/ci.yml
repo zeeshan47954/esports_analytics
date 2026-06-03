@@ -93,31 +93,6 @@ jobs:
       - name: Airflow DAG Syntax Check
         run: |
           echo "🔍 Checking Airflow DAGs..."
-
-          # Create logs directory to prevent FileNotFoundError
-          mkdir -p airflow/logs
-
-          python -c '
-            import os
-            import sys
-            sys.path.append(".")
-            
-            from airflow.models import DagBag
-            
-            dagbag = DagBag(dag_folder="airflow/dags", include_examples=False)
-            
-            print("Number of DAGs found:", len(dagbag.dags))
-            print("DAG Load Errors:", dagbag.import_errors)
-            
-            if dagbag.import_errors:
-                print("⚠️ Some DAGs failed to load (expected in CI due to logging paths)")
-            else:
-                print("✅ All DAGs loaded successfully")
-       
-          '
-      - name: Airflow DAG Syntax Check
-        run: |
-          echo "🔍 Checking Airflow DAGs..."
           mkdir -p airflow/logs
 
           python3 -c "
