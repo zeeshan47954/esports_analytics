@@ -54,41 +54,68 @@ jobs:
           pytest --cov=. --cov-report=xml -v || echo "No tests found or all tests passed"
 
       - name: dbt Tests
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         run: |
           echo "🔍 Looking for dbt project..."
 
           if [ -d "esports_dbt/esports_dbt" ]; then
-            echo "✅ Found nested dbt project at: esports_dbt/esports_dbt"
             cd esports_dbt/esports_dbt
           elif [ -d "esports_dbt" ]; then
-            echo "✅ Found dbt project at: esports_dbt"
             cd esports_dbt
           else
-            echo "❌ No dbt folder found"
+            echo "❌ dbt folder not found"
             exit 0
           fi
 
           echo "Current directory: $(pwd)"
-          ls -la
 
-          echo "Running dbt commands..."
-          dbt deps --target dev || true
+          # Create minimal profiles.yml for CI using secrets
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << EOF
+          esports_dbt:
+            target: dev
+            outputs:
+              dev:
+                type: postgres
+                host: $DB_HOST
+                user: $DB_USER
+                password: $DB_PASSWORD
+                port: 5432
+                dbname: esports_analytics
+                schema: public
+                threads: 4
+          EOF
+
+          echo "✅ Created temporary profiles.yml for CI"
+
+          dbt deps || true
           dbt compile --target dev || true
           dbt test --target dev || true
       - name: Airflow DAG Syntax Check
         run: |
-            python -c "
+          echo "🔍 Checking Airflow DAGs..."
+
+          # Create logs directory to prevent FileNotFoundError
+          mkdir -p airflow/logs
+
+          python -c '
             import os
             import sys
-            sys.path.append('.')
+            sys.path.append(".")
+            
             from airflow.models import DagBag
-            # Create logs directory to prevent FileNotFoundError
-            os.makedirs('airflow/logs', exist_ok=True)
-            dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
-            print('Number of DAGs found:', len(dagbag.dags))
-            print('DAG Load Errors:', dagbag.import_errors)
+            
+            dagbag = DagBag(dag_folder="airflow/dags", include_examples=False)
+            
+            print("Number of DAGs found:", len(dagbag.dags))
+            print("DAG Load Errors:", dagbag.import_errors)
+            
             if dagbag.import_errors:
-                print('⚠️ Some DAGs have import errors (expected in CI)')
+                print("⚠️ Some DAGs failed to load (expected in CI due to logging paths)")
             else:
-                print('✅ All DAGs loaded successfully')
+                print("✅ All DAGs loaded successfully")
+          '
 
