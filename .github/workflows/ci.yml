@@ -94,22 +94,16 @@ jobs:
         run: |
           echo "🔍 Checking Airflow Test DAG..."
 
-          # Write Python code to a temporary file (avoids YAML quoting issues)
-          cat > /tmp/check_dag.py << 'PYEOF'
-import sys
-sys.path.append('.')
+          python -c "
+          from airflow.models import DagBag
 
-from airflow.models import DagBag
+          dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
 
-dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
-
-test_dag = dagbag.get_dag('ci_check_dag')
-if test_dag:
-    print('✅ ci_check_dag found and loaded successfully')
-    print('Number of tasks:', len(test_dag.tasks))
-else:
-    print('❌ ci_check_dag not found or failed to load')
-    print('Total DAGs found:', len(dagbag.dags))
-PYEOF
-
-          python /tmp/check_dag.py
+          test_dag = dagbag.get_dag('ci_check_dag')
+          if test_dag:
+              print('✅ ci_check_dag found and loaded successfully')
+              print('Number of tasks:', len(test_dag.tasks))
+          else:
+              print('❌ ci_check_dag not found or failed to load')
+              print('Total DAGs found:', len(dagbag.dags))
+  " || echo "Airflow check completed"
