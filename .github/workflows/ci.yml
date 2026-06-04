@@ -106,4 +106,4 @@ jobs:
           else:
               print('❌ ci_check_dag not found or failed to load')
               print('Total DAGs found:', len(dagbag.dags))
-  " || echo "Airflow check completed"
+          "    
