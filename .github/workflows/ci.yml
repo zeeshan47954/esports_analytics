@@ -94,16 +94,24 @@ jobs:
         run: |
           echo "🔍 Checking Airflow Test DAG..."
 
+          mkdir -p airflow/logs
+
           python -c "
+          import sys
+          sys.path.append('.')
+
           from airflow.models import DagBag
 
+          # Load DAGs (this will show import errors from other DAGs but won't crash)
           dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
 
-          test_dag = dagbag.get_dag('ci_check_dag')
-          if test_dag:
-              print('✅ ci_check_dag found and loaded successfully')
-              print('Number of tasks:', len(test_dag.tasks))
+          print('Total DAGs successfully loaded:', len(dagbag.dags))
+          print('Number of DAGs with import errors:', len(dagbag.import_errors))
+
+          # Check if our test DAG exists
+          if 'ci_check_dag' in dagbag.dags:
+              print('✅ ci_check_dag loaded successfully!')
+              print('Number of tasks:', len(dagbag.dags['ci_check_dag'].tasks))
           else:
-              print('❌ ci_check_dag not found or failed to load')
-              print('Total DAGs found:', len(dagbag.dags))
-          "    
+              print('❌ ci_check_dag was NOT loaded')
+          " 
