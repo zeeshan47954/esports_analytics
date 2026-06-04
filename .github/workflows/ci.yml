@@ -143,19 +143,19 @@ jobs:
           mkdir -p airflow/logs
 
           python -c "
-import sys
-sys.path.append('.')
+          import sys
+          sys.path.append('.')
 
-from airflow.models import DagBag
+          from airflow.models import DagBag
 
-dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
+          dagbag = DagBag(dag_folder='airflow/dags', include_examples=False)
 
-print('Total DAGs successfully loaded:', len(dagbag.dags))
-print('Number of DAGs with import errors:', len(dagbag.import_errors))
+          print('Total DAGs successfully loaded:', len(dagbag.dags))
+          print('Number of DAGs with import errors:', len(dagbag.import_errors))
 
-if 'ci_check_dag' in dagbag.dags:
-    print('✅ ci_check_dag loaded successfully!')
-    print('Number of tasks:', len(dagbag.dags['ci_check_dag'].tasks))
-else:
-    print('❌ ci_check_dag was NOT loaded')
-" || echo "Airflow check completed"
+          if 'ci_check_dag' in dagbag.dags:
+              print('✅ ci_check_dag loaded successfully!')
+              print('Number of tasks:', len(dagbag.dags['ci_check_dag'].tasks))
+          else:
+              print('❌ ci_check_dag was NOT loaded')
+          " || echo "Airflow check completed"
