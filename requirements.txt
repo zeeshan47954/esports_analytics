@@ -1,3 +1,9 @@
+# =============================================================================
+# Airflow 2.10 (Stable + Widely Used)
+# =============================================================================
+apache-airflow[postgres,amazon,redis]==2.10.5
+--constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.11.txt
+
 # Core data & database
 pandas==2.2.2
 numpy==1.26.4
@@ -38,6 +44,6 @@ pillow==10.3.0
 PyJWT==2.8.0
 argon2-cffi==23.1.0
 
-# Testing (installed separately in CI but listed here for completeness)
+# Testing
 pytest
 pytest-cov
