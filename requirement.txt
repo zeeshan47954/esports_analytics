@@ -1,0 +1,47 @@
+apache-airflow[postgres,amazon,redis]==2.10.5
+--constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.11.txt
+
+# Core data & database
+# Versions intentionally unpinned - Airflow constraints manage them
+pandas
+numpy
+SQLAlchemy
+alembic
+psycopg2-binary
+redis
+
+# API & web
+fastapi
+uvicorn
+httpx
+python-multipart
+pydantic
+pydantic_core
+
+# AWS
+boto3
+botocore
+
+# Utilities
+python-dotenv
+PyYAML
+requests
+click
+rich
+pytz
+tzdata
+python-dateutil
+tqdm
+
+# Visualization
+matplotlib
+seaborn
+pillow
+
+# Auth
+PyJWT
+argon2-cffi
+
+# Testing
+pytest
+pytest-cov
